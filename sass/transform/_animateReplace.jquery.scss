@@ -1,0 +1,63 @@
+@CHARSET "ISO-8859-1";
+
+@import "compass/css3";
+@import "transform/settings";
+
+.appear-animation {
+  display: block;
+  position: relative;
+  z-index: 1000;
+  overflow:shown;
+    
+	.coming-in, .going-out {
+    @include backface-visibility(hidden);
+    @include transition(transform, box-shadow);
+    @include transition-duration(0.75s, 0.5s);
+    
+    display: block;
+    height: 100%;
+    width: 100%; 
+    position: absolute;
+    top:0;
+    left:0;
+	  margin:0;
+	  padding:0;
+	}
+	
+	.coming-in {
+		@include transform(perspective($perspective) rotateY(0deg));
+		@include transform3d(perspective($perspective) rotateY(0deg));
+		@include transform-origin(left);
+    @include transition-timing-function(cubic-bezier(0.680, -0.550, 0.265, 1.550), cubic-bezier(0.645, -0.600, 0.000, 1.000));
+		
+		@include box-shadow(#999 5px 1px 10px);
+		z-index: 900;
+		/*background-color: lightyellow;*/
+	}
+	.going-out {
+		@include transform(perspective($perspective) rotateY(180deg));
+		@include transform3d(perspective($perspective) rotateY(180deg));
+		@include transform-origin(left);
+    @include transition-timing-function(cubic-bezier(0.680, -0.550, 0.265, 1.550), cubic-bezier(1.000, 0.000, 0.255, 1.600));
+		@include box-shadow(#fff -50px -10px 40px);
+		z-index: 800;
+		/*background-color: lavender;*/
+	}
+	
+	&.animated {
+		.coming-in {
+			@include transform(perspective($perspective) rotateY(180deg));
+			@include transform3d(perspective($perspective) rotateY(180deg));
+			@include transform-origin(left);
+			@include box-shadow(#fff -50px -10px 40px);
+		}
+		.going-out {
+			@include transform(perspective($perspective) rotateY(0deg));
+			@include transform3d(perspective($perspective) rotateY(0deg));
+			@include transform-origin(left);
+			@include box-shadow(#999 5px 1px 10px);
+			z-index: 950;
+		}
+	}
+}
+
