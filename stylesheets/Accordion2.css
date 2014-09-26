@@ -1,0 +1,513 @@
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+/* line 4, ../sass/Accordion2.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, ../sass/Accordion2.scss */
+body {
+  font-family: 'Lato';
+  font-size: 14px;
+}
+
+/* line 16, ../sass/Accordion2.scss */
+h1 {
+  font-size: 2em;
+  padding: 2em;
+  text-align: center;
+}
+
+/* line 22, ../sass/Accordion2.scss */
+.accordion dl {
+  border: 1px solid #ddd;
+}
+
+/* line 25, ../sass/Accordion2.scss */
+.accordion dl:after {
+  content: "";
+  display: block;
+  height: 1em;
+  width: 100%;
+  background-color: #5380ad;
+}
+
+/* line 32, ../sass/Accordion2.scss */
+.accordion dt > a {
+  text-align: center;
+  font-size: .85em;
+  font-weight: 700;
+  padding: 1em;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: background-color 0.5s ease-in-out;
+}
+
+/* line 42, ../sass/Accordion2.scss */
+.accordion dd {
+  background-color: #eee;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 47, ../sass/Accordion2.scss */
+.accordion dd > p {
+  padding: 1em 2em 1em 2em;
+  font-size: .9em;
+}
+
+/* line 52, ../sass/Accordion2.scss */
+.accordion {
+  position: relative;
+  background-color: #eee;
+}
+
+/* line 57, ../sass/Accordion2.scss */
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2em 0 2em 0;
+}
+
+/* line 63, ../sass/Accordion2.scss */
+.accordionTitle {
+  background-color: #5380ad;
+  border-bottom: 1px solid #b7d4ef;
+}
+
+/* line 67, ../sass/Accordion2.scss */
+.accordionTitle:before {
+  content: "+";
+  font-size: 1.5em;
+  font-family: serif;
+  font-weight: bolder;
+  line-height: 0.5em;
+  float: left;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* line 79, ../sass/Accordion2.scss */
+.accordionTitle:hover {
+  background-color: #316793;
+}
+
+/* line 83, ../sass/Accordion2.scss */
+.accordionTitleActive {
+  background-color: #316793;
+}
+
+/* line 86, ../sass/Accordion2.scss */
+.accordionTitleActive:before {
+  -webkit-transform: rotate(-225deg);
+  -moz-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+}
+
+/* line 92, ../sass/Accordion2.scss */
+.accordionItem {
+  height: auto;
+  overflow: hidden;
+}
+
+/* line 97, ../sass/Accordion2.scss */
+.accordionItem2 {
+  height: auto;
+  overflow: hidden;
+}
+
+@media all {
+  /* line 102, ../sass/Accordion2.scss */
+  .accordionItem {
+    max-height: 75em;
+    -webkit-transition: max-height 1s;
+    -moz-transition: max-height 1s;
+    -o-transition: max-height 1s;
+    transition: max-height 1s;
+  }
+
+  /* line 110, ../sass/Accordion2.scss */
+  .accordionItem2 {
+    max-height: 20em;
+    -webkit-transition: max-height .65s;
+    -moz-transition: max-height .65s;
+    -o-transition: max-height .65s;
+    transition: max-height .65s;
+  }
+}
+@media screen and (min-width: 48em) {
+  /* line 86, ../sass/Accordion2.scss */
+  /* line 120, ../sass/Accordion2.scss */
+  .accordionItem {
+    max-height: auto;
+    -webkit-transition: max-height 1.5s;
+    -moz-transition: max-height 1.5s;
+    -o-transition: max-height 1.5s;
+    transition: max-height 1.5s;
+  }
+
+  /* line 128, ../sass/Accordion2.scss */
+  .accordionItem2 {
+    max-height: auto;
+    -webkit-transition: max-height .65s;
+    -moz-transition: max-height .65s;
+    -o-transition: max-height .65s;
+    transition: max-height .65s;
+  }
+}
+/* line 137, ../sass/Accordion2.scss */
+.accordionItemCollapsed {
+  max-height: 0;
+}
+
+/* line 141, ../sass/Accordion2.scss */
+.animateIn {
+  -webkit-animation-name: accordionIn;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  -moz-animation-name: normal;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-direction: alternate;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-fill-mode: both;
+  -moz-animation-delay: 0s;
+  animation-name: accordionIn;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+
+/* line 165, ../sass/Accordion2.scss */
+.animateOut {
+  -webkit-animation-name: accordionOut;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  -moz-animation-name: accordionOut;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-direction: alternate;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-fill-mode: both;
+  -moz-animation-delay: 0s;
+  animation-name: accordionOut;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes accordionIn {
+  /* line 190, ../sass/Accordion2.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+  }
+
+  /* line 195, ../sass/Accordion2.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes accordionIn {
+  /* line 202, ../sass/Accordion2.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.8);
+  }
+
+  /* line 207, ../sass/Accordion2.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+  }
+}
+
+@keyframes accordionIn {
+  /* line 214, ../sass/Accordion2.scss */
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  /* line 219, ../sass/Accordion2.scss */
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes accordionOut {
+  /* line 226, ../sass/Accordion2.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+
+  /* line 231, ../sass/Accordion2.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+  }
+}
+
+@-moz-keyframes accordionOut {
+  /* line 238, ../sass/Accordion2.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: scale(1);
+  }
+
+  /* line 243, ../sass/Accordion2.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: scale(0.8);
+  }
+}
+
+@keyframes accordionOut {
+  /* line 250, ../sass/Accordion2.scss */
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* line 255, ../sass/Accordion2.scss */
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* line 265, ../sass/Accordion2.scss */
+.accordion2 dl:after {
+  display: none;
+}
+
+/* line 269, ../sass/Accordion2.scss */
+.accordionTitle2 dt {
+  position: relative;
+}
+
+/* line 273, ../sass/Accordion2.scss */
+.accordion2 dt > a {
+  padding: .6em;
+  font-size: .8em;
+  color: #323232;
+  text-align: left;
+  -webkit-transition: text-align .65s;
+  -moz-transition: text-align .65s;
+  -o-transition: text-align .65s;
+  transition: text-align .65s;
+}
+
+/* line 285, ../sass/Accordion2.scss */
+.accordionTitle2 {
+  background-color: #eee;
+  color: #323232;
+  border-top: 1px solid rgba(105, 106, 107, 0.5);
+  border-bottom: none;
+}
+
+/* line 292, ../sass/Accordion2.scss */
+.accordionTitle2.english:before {
+  line-height: 1.2em;
+  font-size: 1.6em;
+  margin-left: 1em;
+  margin-right: calc(50% - 6.55em);
+  -webkit-transition: margin-right .65s;
+  -moz-transition: margin-right .65s;
+  -o-transition: margin-right .65s;
+  transition: margin-right .65s;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+/* line 307, ../sass/Accordion2.scss */
+.accordionTitle2.imath:before {
+  line-height: 1.2em;
+  font-size: 1.6em;
+  margin-left: 1em;
+  margin-right: calc(50% - 6.8em);
+  -webkit-transition: margin-right .65s;
+  -moz-transition: margin-right .65s;
+  -o-transition: margin-right .65s;
+  transition: margin-right .65s;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+/* line 322, ../sass/Accordion2.scss */
+.accordionTitle2.tmath:before {
+  line-height: 1.2em;
+  font-size: 1.6em;
+  margin-left: 1em;
+  margin-right: calc(50% - 4.7em);
+  -webkit-transition: margin-right .65s;
+  -moz-transition: margin-right .65s;
+  -o-transition: margin-right .65s;
+  transition: margin-right .65s;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+/* line 337, ../sass/Accordion2.scss */
+.accordionTitle2.geom:before {
+  line-height: 1.2em;
+  font-size: 1.6em;
+  margin-left: 1em;
+  margin-right: calc(50% - 4.9em);
+  -webkit-transition: margin-right .65s;
+  -moz-transition: margin-right .65s;
+  -o-transition: margin-right .65s;
+  transition: margin-right .65s;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+/* line 352, ../sass/Accordion2.scss */
+.accordionTitle2:hover {
+  background-color: #d7d7d7;
+}
+
+/* line 356, ../sass/Accordion2.scss */
+.accordionTitle2.accordionTitleActive:before {
+  margin-right: calc(20% - 1.9em);
+  -webkit-transition: margin-right .65s;
+  -moz-transition: margin-right .65s;
+  -o-transition: margin-right .65s;
+  transition: margin-right .65s;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+/* line 369, ../sass/Accordion2.scss */
+.accordionTitleActive.accordionTitle2 {
+  text-align: left;
+  -webkit-transition: text-align .65s;
+  -moz-transition: text-align .65s;
+  -o-transition: text-align .65s;
+  transition: text-align .65s;
+}
+
+/* line 377, ../sass/Accordion2.scss */
+.accordion2 dd > p {
+  margin-left: 20%;
+  margin-right: 5%;
+  padding: 1em 1em .65em 0;
+}
+
+/* line 384, ../sass/Accordion2.scss */
+.btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: whitesmoke;
+  background-image: -moz-linear-gradient(top, white, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+  background-image: -o-linear-gradient(top, white, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFE6E6E6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e6e6e6;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* line 386, ../sass/Accordion2.scss */
+.btn-success {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #2c8b3d;
+  background-image: -moz-linear-gradient(top, #3d994d, #147827);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3d994d), to(#147827));
+  background-image: -webkit-linear-gradient(top, #3d994d, #147827);
+  background-image: -o-linear-gradient(top, #3d994d, #147827);
+  background-image: linear-gradient(to bottom, #3d994d, #147827);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3D994D', endColorstr='#FF147827', GradientType=0);
+  border-color: #147827 #147827 #093612;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #147827;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+/* line 388, ../sass/Accordion2.scss */
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] {
+  color: white;
+  background-color: #147827;
+  *background-color: red;
+}
+
+/* line 390, ../sass/Accordion2.scss */
+.btn-success:active, .btn-success.active {
+  background-color: #0d4c19 \9;
+}
+
+/* line 392, ../sass/Accordion2.scss */
+.disc-btn {
+  float: left;
+  margin-left: 20%;
+  margin-bottom: .75em;
+}
+
+/* line 398, ../sass/Accordion2.scss */
+.disc-btn2 {
+  float: left;
+  margin-left: 1em;
+  margin-bottom: .75em;
+}
