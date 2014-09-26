@@ -16,6 +16,8 @@
 @import "font-awesome";
 @import "font-awesome/variables";
 
+@import "flexbox/flexbox";
+
 $green: #3c5346;
 $red: #872633;
 $yellow: #dfb655;
@@ -147,8 +149,12 @@ h3 {
 	margin-top:$med-gutter;
 	
 	/*-webkit-column-rule:2.01em solid white;*/
+	@include flexbox();
+	flex-direction:row;
+	
 	&  li {
 		display:block;
+		@include flex(1 auto);
 		/*margin-top:$med-gutter;*/
 		font-size:1.2em;
 		line-height:1.2em;
