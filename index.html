@@ -81,6 +81,14 @@
 			});
 		})(jQuery);
 	</script>
+	<script language="javascript">
+	$(document).ready(function(){
+		var twoLIs = $(".two li");
+		twoLIs.each(function(i){
+			  $(this).css('z-index', twoLIs.length-i);
+			});
+	});
+	</script>
 </head>
 <body>
 <!-- OFF CANVAS SECTIONS WRAPPING THE MAIN CONTENT -->

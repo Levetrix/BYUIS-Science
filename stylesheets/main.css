@@ -3851,9 +3851,7 @@ div, figure, ul, li {
   padding: 0;
   margin: 0;
   border: 0px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  /*@include box-sizing(border-box)*/
 }
 
 /* line 71, ../sass/main.scss */
@@ -3930,38 +3928,46 @@ h3 {
   margin: 0 auto;
   width: 13.8125em;
   margin-top: 2.01em;
+  /*-webkit-column-rule:2.01em solid white;*/
 }
-
-/* line 151, ../sass/main.scss */
-.two li {
+/* line 150, ../sass/main.scss */
+.two ul li {
   display: block;
-  margin-top: 2.01em;
+  /*margin-top:$med-gutter;*/
   font-size: 1.2em;
   line-height: 1.2em;
   text-align: left;
-}
-/* line 158, ../sass/main.scss */
-.two li:first-child {
   border-top: #66b9e3 1px solid;
-  padding-top: 2.01em;
+  border-bottom: white 1px solid;
+  background-color: white;
+  padding-top: 1.005em;
+  padding-bottom: 1.005em;
+  position: relative;
+  top: -1px;
+  margin-bottom: -1px;
+  /*&:first-child {
+  border-top: $blue 1px solid;
+  padding-top:$med-gutter;
+  
+  }*/
 }
 
-/* line 165, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 .two li:nth-child(n + 5) {
   display: none;
 }
 
-/* line 169, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 .three {
   background-color: lightgrey;
 }
 
-/* line 173, ../sass/main.scss */
+/* line 183, ../sass/main.scss */
 .three h2:first-child {
   margin-bottom: 0.769em;
 }
 
-/* line 181, ../sass/main.scss */
+/* line 191, ../sass/main.scss */
 .featured {
   width: 13.8125em;
   height: calc(1.5 * 13.8125em);
@@ -3969,29 +3975,29 @@ h3 {
   margin: calc(2.01em / 2);
   position: relative;
 }
-/* line 188, ../sass/main.scss */
+/* line 198, ../sass/main.scss */
 .featured.f1 {
   background-color: teal;
 }
-/* line 192, ../sass/main.scss */
+/* line 202, ../sass/main.scss */
 .featured.f2 {
   background-color: #dfb655;
 }
-/* line 196, ../sass/main.scss */
+/* line 206, ../sass/main.scss */
 .featured.f3 {
   background-color: grey;
 }
-/* line 200, ../sass/main.scss */
+/* line 210, ../sass/main.scss */
 .featured.f4 {
   background-color: #872633;
 }
 
-/* line 205, ../sass/main.scss */
+/* line 215, ../sass/main.scss */
 .f4 {
   display: none;
 }
 
-/* line 209, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 .shader {
   position: absolute;
   bottom: 0;
@@ -3999,7 +4005,7 @@ h3 {
   height: 55px;
   background-color: rgba(50, 50, 50, 0.55);
 }
-/* line 216, ../sass/main.scss */
+/* line 226, ../sass/main.scss */
 .shader h3 {
   color: #fff;
   padding-top: 0.769em;
@@ -4007,17 +4013,17 @@ h3 {
 }
 
 @media (min-width: 575px) {
-  /* line 224, ../sass/main.scss */
+  /* line 234, ../sass/main.scss */
   .two li:first-child {
     margin-top: 0;
   }
-  /* line 228, ../sass/main.scss */
+  /* line 238, ../sass/main.scss */
   .two li:nth-child(n + 5) {
     display: block;
   }
 }
 @media (min-width: 575px) and (max-width: 850px) {
-  /* line 234, ../sass/main.scss */
+  /* line 244, ../sass/main.scss */
   .two ul {
     width: calc(2 * 13.8125em + 2.01em);
     -webkit-column-count: 2;
@@ -4032,19 +4038,19 @@ h3 {
     column-gap: 2.01em;
   }
 
-  /* line 241, ../sass/main.scss */
+  /* line 251, ../sass/main.scss */
   .two li:nth-child(5) {
     padding-top: 2.01em;
     border-top: #66b9e3 1px solid;
   }
 
-  /* line 249, ../sass/main.scss */
+  /* line 259, ../sass/main.scss */
   .featured.f4 {
     display: inline-block;
   }
 }
 @media (min-width: 850px) and (max-width: 1200px) {
-  /* line 257, ../sass/main.scss */
+  /* line 267, ../sass/main.scss */
   .two ul {
     width: calc(3 * 13.8125em + 2.01em * 2);
     -webkit-column-count: 3;
@@ -4059,21 +4065,24 @@ h3 {
     column-gap: 2.01em;
   }
 
-  /* line 264, ../sass/main.scss */
+  /* line 273, ../sass/main.scss */
+  .two {
+    /*& li:nth-child {
+    	padding-top:$med-gutter;
+    	border-top:$blue 1px solid;
+    	top:-1px; 
+    }*/
+  }
+  /* line 274, ../sass/main.scss */
   .two li:nth-child(n + 7) {
     display: none;
   }
-  /* line 268, ../sass/main.scss */
-  .two li:nth-child(2n+1) {
-    padding-top: 2.01em;
-    border-top: #66b9e3 1px solid;
-  }
-  /* line 273, ../sass/main.scss */
+  /* line 284, ../sass/main.scss */
   .two li:nth-child(4) {
     margin-bottom: 3em;
   }
 
-  /* line 280, ../sass/main.scss */
+  /* line 291, ../sass/main.scss */
   .featured.f4 {
     display: none;
   }

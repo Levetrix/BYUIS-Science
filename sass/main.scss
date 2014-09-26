@@ -60,7 +60,7 @@ div, figure, ul, li {
 	padding:0;
 	margin:0;
 	border:0px;
-	@include box-sizing(border-box)
+	/*@include box-sizing(border-box)*/
 	
 }
 
@@ -145,22 +145,32 @@ h3 {
 	margin:0 auto;
 	width:$quarter;
 	margin-top:$med-gutter;
+	
+	/*-webkit-column-rule:2.01em solid white;*/
+	&  li {
+		display:block;
+		/*margin-top:$med-gutter;*/
+		font-size:1.2em;
+		line-height:1.2em;
+		text-align:left;
 		
-}
-
-.two li {
-	display:block;
-	margin-top:$med-gutter;
-	font-size:1.2em;
-	line-height:1.2em;
-	text-align:left;
-	
-	&:first-child {
-	border-top: $blue 1px solid;
-	padding-top:$med-gutter;
-	
+		border-top: $blue 1px solid;
+		border-bottom: white 1px solid;
+		background-color:white;
+		padding-top:$med-gutter/2;
+		padding-bottom:$med-gutter/2;
+		position:relative;
+		top:-1px;
+		margin-bottom:-1px;
+		/*&:first-child {
+		border-top: $blue 1px solid;
+		padding-top:$med-gutter;
+		
+		}*/
 	}
 }
+
+
 
 .two li:nth-child( n + 5 ) {
 	display:none;
@@ -265,10 +275,11 @@ h3 {
 			display:none;
 		}
 		
-		& li:nth-child(2n+1) {
+		/*& li:nth-child {
 			padding-top:$med-gutter;
 			border-top:$blue 1px solid;
-		}
+			top:-1px; 
+		}*/
 		
 		& li:nth-child(4) {
 			margin-bottom:3em;
