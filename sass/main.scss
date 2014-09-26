@@ -150,12 +150,10 @@ h3 {
 
 .two li {
 	display:block;
-	width:$quarter;
 	margin-top:$med-gutter;
 	font-size:1.2em;
 	line-height:1.2em;
 	text-align:left;
-	width:$quarter;
 	
 	&:first-child {
 	border-top: $blue 1px solid;
@@ -221,8 +219,70 @@ h3 {
 		line-height:1em;
 	}
 }
+@media (min-width:575px) {
+	.two { 
+		& li:first-child {
+			margin-top:0;
+		}
+		
+		& li:nth-child( n + 5 ) {
+			display:block;	
+		}
+	}
+}
+@media (min-width:575px) and (max-width:850px) {
+	.two ul {
+	width: calc(2 * #{$quarter} + #{$med-gutter});
+	@include column-count(2);
+	@include column-gap($med-gutter);
+	}
+	
+	.two {		
+		& li:nth-child(5) {
+			padding-top:$med-gutter;
+			border-top:$blue 1px solid;
+		}
+	
+	}
+	
+	.featured {
+		&.f4 {
+			display:inline-block;
+		}
+	}
+	
+}
 
-
+@media (min-width:850px) and (max-width:1200px) {
+	.two ul {
+		width: calc(3 * #{$quarter} + #{$med-gutter} * 2);
+		@include column-count(3);
+		@include column-gap($med-gutter);
+	}
+	
+	.two {
+		& li:nth-child(n + 7) {
+			display:none;
+		}
+		
+		& li:nth-child(2n+1) {
+			padding-top:$med-gutter;
+			border-top:$blue 1px solid;
+		}
+		
+		& li:nth-child(4) {
+			margin-bottom:3em;
+		}
+	
+	}
+	
+	.featured {
+		&.f4 {
+			display:none;
+		}
+	}
+	
+}
 
 
 
