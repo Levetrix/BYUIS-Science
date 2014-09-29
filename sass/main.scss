@@ -281,7 +281,7 @@ h3 {
 	
 }
 
-@media (min-width:850px) /* and (max-width:1107px)*/ {
+@media (min-width:850px) and (max-width:1107px) {
 	.two ul {
 		width: calc(3 * #{$quarter} + #{$med-gutter} * 2);
 	}
@@ -317,7 +317,7 @@ h3 {
 	
 }
 
-/*@media (min-width:1107px) {
+@media (min-width:1107px) {
 	.featured {
 		&.f4 {
 			display:inline-block;
@@ -340,7 +340,7 @@ h3 {
 			}
 		}
 	}
-}*/
+}
 
 
 
