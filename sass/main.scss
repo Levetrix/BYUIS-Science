@@ -40,6 +40,8 @@ $default-text-shadow-h-offset: 2px;
 $OpenSans: "OpenSans", "OpenSans_IE";
 $OpenSansLt: "OpenSansLt", "OpenSansLt_IE";
 
+$media-break-1: "min-width:575px";
+
 @include font-face("OpenSans", font-files("../../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf"));
 @include font-face("OpenSansLt", font-files("../../fonts/opensans-light-webfont.ttf", "../fonts/opensans-light-webfont.woff", "../fonts/opensans-light-webfont.eot", "../fonts/opensans-light-webfont.svg"));
 @include font-face("OpenSansLt_IE", font-files("../../fonts/opensans-light-webfont.ttf", "../fonts/opensans-light-webfont.woff", "../fonts/opensans-light-webfont.eot", "../fonts/opensans-light-webfont.svg"));
@@ -96,6 +98,10 @@ h2 {
 
 h3 {
 	font-size:1.25em;
+}
+
+.cursor-pointer {
+	cursor:pointer;
 }
 
 /////////////////////////////////////
@@ -180,7 +186,7 @@ h3 {
 		border-top: $blue 1px solid;
 	}
 	
-	&  li:after {
+	& li:after {
 		@include flex(1 100%);
 		content:"&nbsp;";
 		line-height:0;
@@ -216,31 +222,88 @@ h3 {
 		height:calc( 1.5 * #{$quarter});
 		display: inline-block;
 		margin:calc(#{$med-gutter} / 2);
+		z-index:1;
 		position:relative;
-		@include transition-property(width height left);
+		background-size:cover;
+		
+		@include transition-property(width height left z-index);
 		@include transition-timing-function(ease);
 		@include transition-duration(0.250s);
 		
 		&:after {
-			
+			content: "";
+			opacity: 0;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: 0;   
+			@include transition-property(opacity);
+			@include transition-timing-function(ease);
+			@include transition-duration(0.750s);
 		}
 		/*	Handle the focus with :target	*/
 		&.clicked:target {
 			width:calc(100% + #{$med-gutter * 3});
 			left:#{$med-gutter * -2};
+			&:after {
+				opacity:1;
+			}
 		}
 		/*	First 4 tiles styles!	*/
 		&:nth-child(1) {
-			background-color:teal;
+			background-image: url(../img/placeholders/placeholder1.jpg);
+			&:after {
+				background-color:teal;
+			}
 		}
 		&:nth-child(2) {
-			background-color:$yellow;
+			background-image: url(../img/placeholders/placeholder2.jpg);
+			&:after {
+				background-color:$yellow;
+			}
 		}
 		&:nth-child(3) {
-			background-color:grey;
+			background-image: url(../img/placeholders/placeholder3.jpg);
+			&:after {
+				background-color:grey;
+			}
 		}
 		&:nth-child(4) {
-			background-color:$red;
+			background-image: url(../img/placeholders/placeholder4.jpg);
+			&:after {
+				background-color:$red;
+				
+			}
+		}
+		&:nth-child(5) {
+			background-image: url(../img/placeholders/placeholder5.jpg);
+			&:after {
+				background-color:$red;
+				
+			}
+		}
+		&:nth-child(6) {
+			background-image: url(../img/placeholders/placeholder6.jpg);
+			&:after {
+				background-color:$red;
+				
+			}
+		}
+		&:nth-child(7) {
+			background-image: url(../img/placeholders/placeholder7.jpg);
+			&:after {
+				background-color:$red;
+				
+			}
+		}
+		&:nth-child(8) {
+			background-image: url(../img/placeholders/placeholder8.jpg);
+			&:after {
+				background-color:$red;
+				
+			}
 		}
 		/*	All other tiles hidden	*/
 		&:nth-child(n+5) {
@@ -254,6 +317,7 @@ h3 {
 			width:100%;
 			height:55px;
 			background-color:rgba($charcoal, .55);
+			z-index: 2;   
 			
 			& h3 {
 				color:#fff;
@@ -262,7 +326,53 @@ h3 {
 			}
 		}
 	}
-	
+}
+@media all and ($media-break-1) {
+	ul.tile-featured-products {
+		position:relative;
+		display:block;
+		width:#{$quarter * 2 + $med-gutter * 2};
+		height:100%;
+		min-height:#{$quarter * 3.5};
+		margin-left:auto;
+		margin-right:auto;
+		
+		
+		& > li {
+			display:inline-block;
+			width:calc( 50% - $med-gutter );
+			height:calc( 50% - $med-gutter );
+			display: block;
+			position:absolute;
+			
+			@include transition-duration(0.750s);
+		}
+		
+		/*	Handle the focus with :target	*/
+		& > li.clicked:target {
+			width:calc( 101% - #{$med-gutter} );
+			height:calc( 101% - #{$med-gutter} );
+			left:auto;
+			z-index: 3;
+		}
+		/*	First 4 tiles styles!	*/
+		& > li:nth-child(1) {
+			top:0;
+			left:0;
+		}
+		& > li:nth-child(2) {
+			top:0;
+			right:0;
+		}
+		& > li:nth-child(3) {
+			bottom:0;
+			left:0;
+		}
+		& > li:nth-child(4) {
+			bottom:0;
+			right:0;
+		}
+	}
 }
 
 .f4 {

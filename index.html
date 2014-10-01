@@ -223,7 +223,7 @@
 			$(anchor).addClass("clicked")
 		}
 	});
-	$(".clicked").removeClass("clicked");
+	$(".clicked").removeClass("clicked").click(function(){if(!$(this).hasClass("clicked")) $(this).find("a").get(0).click(); else $(this).removeClass("clicked")}).addClass("cursor-pointer");
 </script>
 </body>
 </html>
