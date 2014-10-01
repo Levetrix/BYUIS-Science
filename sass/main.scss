@@ -209,47 +209,66 @@ h3 {
 	
 }
 
-.featured {
-	width:$quarter;
-	height:calc( 1.5 * #{$quarter});
-	display: inline-block;
-	margin:calc(#{$med-gutter} / 2);
-	position:relative;
-	
-	&.f1 {
-		background-color:teal;
+.tile-featured-products {
+	& li {
+		display:inline-block;
+		width:$quarter;
+		height:calc( 1.5 * #{$quarter});
+		display: inline-block;
+		margin:calc(#{$med-gutter} / 2);
+		position:relative;
+		@include transition-property(width height left);
+		@include transition-timing-function(ease);
+		@include transition-duration(0.250s);
+		
+		&:after {
+			
+		}
+		/*	Handle the focus with :target	*/
+		&.clicked:target {
+			width:calc(100% + #{$med-gutter * 3});
+			left:#{$med-gutter * -2};
+		}
+		/*	First 4 tiles styles!	*/
+		&:nth-child(1) {
+			background-color:teal;
+		}
+		&:nth-child(2) {
+			background-color:$yellow;
+		}
+		&:nth-child(3) {
+			background-color:grey;
+		}
+		&:nth-child(4) {
+			background-color:$red;
+		}
+		/*	All other tiles hidden	*/
+		&:nth-child(n+5) {
+			background-color:$black;
+			display:none;
+		}
+		/*	Now for the content styling	*/
+		& .shader {
+			position:absolute;
+			bottom:0;
+			width:100%;
+			height:55px;
+			background-color:rgba($charcoal, .55);
+			
+			& h3 {
+				color:#fff;
+				padding-top:$small-gutter;
+				line-height:1em;
+			}
+		}
 	}
 	
-	&.f2 {
-		background-color:$yellow;
-	}
-	
-	&.f3 {
-		background-color:grey;
-	}
-	
-	&.f4 {
-		background-color:$red;
-	}
 }
 
 .f4 {
 	display:none;
 }
 
-.shader {
-	position:absolute;
-	bottom:0;
-	width:100%;
-	height:55px;
-	background-color:rgba($charcoal, .55);
-	
-	& h3 {
-		color:#fff;
-		padding-top:$small-gutter;
-		line-height:1em;
-	}
-}
 @media (min-width:575px) {
 	.two { 
 		& li:first-child {

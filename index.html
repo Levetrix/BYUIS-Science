@@ -147,26 +147,48 @@
 			</div>
 			<div class="stripe four">
 				<h2>Featured Courses</h2>
-				<div class="featured f1">
-					<div class="shader">
-						<h3>Course</h3>
-					</div>
-				</div>
-				<div class="featured f2">
-					<div class="shader">
-						<h3>Course</h3>
-					</div>
-				</div>
-				<div class="featured f3">
-					<div class="shader">
-						<h3>Course</h3>
-					</div>
-				</div>
-				<div class="featured f4">			
-					<div class="shader">
-						<h3>Course</h3>
-					</div>
-				</div>
+				<ul class="tile-featured-products">
+					<li id="AAA-100-M001" data-course-code="AAA-100-M001" data-course-background="placeholders/placeholder1.jpg" class="clicked"><a href="#AAA-100-M001" data-scroll data-options='{ "easing": "linear" }'>
+						<div class="shader">
+							<h3>Placeholder Course Title 1</h3>
+						</div>
+					</a></li>
+					<li id="AAA-101-M001" data-course-code="AAA-101-M001" data-course-background="placeholders/placeholder2.jpg" class="clicked"><a href="#AAA-101-M001" data-scroll data-options='{ "easing": "linear" }'>
+						<div class="shader">
+							<h3>Title Placeholder 2</h3>
+						</div>
+					</a></li>
+					<li id="AAA-102-M001" data-course-code="AAA-102-M001" data-course-background="placeholders/placeholder3.jpg" class="clicked"><a href="#AAA-102-M001" data-scroll data-options='{ "easing": "linear" }'>
+						<div class="shader">
+							<h3>Course Placeholder 3</h3>
+						</div>
+					</a></li>
+					<li id="AAA-103-M001" data-course-code="AAA-103-M001" data-course-background="placeholders/placeholder4.jpg" class="clicked"><a href="#AAA-103-M001" data-scroll data-options='{ "easing": "linear" }'>			
+						<div class="shader">
+							<h3>Title of Placeholder 4</h3>
+						</div>
+					</a></li>
+					<li id="AAA-104-M001" data-course-code="AAA-104-M001" data-course-background="placeholders/placeholder5.jpg" class="clicked"><a href="#AAA-104-M001" data-scroll data-options='{ "easing": "linear" }'>			
+						<div class="shader">
+							<h3>Course Place of Holding 5</h3>
+						</div>
+					</a></li>
+					<li id="AAA-105-M001" data-course-code="AAA-105-M001" data-course-background="placeholders/placeholder6.jpg" class="clicked"><a href="#AAA-105-M001" data-scroll data-options='{ "easing": "linear" }'>			
+						<div class="shader">
+							<h3>Placeholding 106</h3>
+						</div>
+					</a></li>
+					<li id="AAA-106-M001" data-course-code="AAA-106-M001" data-course-background="placeholders/placeholder7.jpg" class="clicked"><a href="#AAA-106-M001" data-scroll data-options='{ "easing": "linear" }'>			
+						<div class="shader">
+							<h3>Remove This Image 7</h3>
+						</div>
+					</a></li>
+					<li id="AAA-107-M001" data-course-code="AAA-107-M001" data-course-background="placeholders/placeholder8.jpg" class="clicked"><a href="#AAA-107-M001" data-scroll data-options='{ "easing": "linear" }'>			
+						<div class="shader">
+							<h3>Last Placeholder, Part 8</h3>
+						</div>
+					</a></li>
+				</ul>
 			</div>
 		</div>
 		
@@ -184,6 +206,24 @@
   ga('send', 'pageview');
 	ga('require', 'ecommerce', 'ecommerce.js');   // Load the ecommerce plug-in.
 	
+</script>
+<script src='js/vendor/bind-polyfill.min.js'></script>
+<script src='js/vendor/smooth-scroll.min.js'></script>
+<script>
+	smoothScroll.init({
+		speed: 250,
+		easing: 'easeInOutCubic',
+		offset: 0,
+		updateURL: true,
+		callbackBefore: function ( toggle, anchor ) {
+			$(".clicked").removeClass("clicked");
+		},
+		callbackAfter: function ( toggle, anchor ) {
+			window.location.href = ""+anchor;
+			$(anchor).addClass("clicked")
+		}
+	});
+	$(".clicked").removeClass("clicked");
 </script>
 </body>
 </html>
