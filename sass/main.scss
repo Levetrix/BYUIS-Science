@@ -279,6 +279,29 @@ h3 {
 			left: 0;
 		}
 		
+		/*	"more info" buttons	*/
+		&:before {
+			position: absolute;
+			bottom: $med-gutter;
+			/*left: #{ ($quarter + ($med-gutter * 2)) / 2 };*/ 
+			margin-left:auto;
+			margin-right:auto;
+			z-index: 4;
+			
+			height: 3rem;
+			width:	#{ $med-gutter * 2 };
+			
+			content: "More Info";
+			background-color:$blue;
+			
+		  @include background-image(linear-gradient(to bottom right, $blue, $teal));
+		  @include border-radius(1.5rem);
+			
+			opacity: 1;
+			@include transition-property(opacity);
+			@include transition-timing-function(ease);
+			@include transition-duration(0.750s);
+		}
 		/*	Background images (shown initially, hidden with click)	*/
 		&:after {
 			content: "";
