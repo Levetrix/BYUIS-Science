@@ -80,6 +80,10 @@ div, figure, ul, li {
 	
 }
 
+a {
+	color:$blue;
+}
+
 .section {
 		
 }
@@ -124,7 +128,7 @@ h3 {
 	text-align:center;
 	position:relative;
 	padding:$med-gutter;
-	padding-bottom: calc( #{$med-gutter} * 2 );
+	//padding-bottom: calc( #{$med-gutter} * 2 );
 }
 
 .one {
@@ -141,6 +145,7 @@ h3 {
 }
 
 .arrow {
+	display:none;
 	background-color:$red;
 	height:32px;
 	width:110px;
@@ -216,7 +221,12 @@ h3 {
 }
 
 .three {
-	background-color:lightgrey;
+	background-color:$charcoal;
+	color:#fff;
+}
+
+.three h2 {
+	color:#fff;
 }
 
 .three h2:first-child {
@@ -376,11 +386,112 @@ h3 {
 		}
 	}
 }
+
 .hidden-scroll-anchor {
 	height:0;
 	position:absolute;
 	overflow:hidden;
 }
+
+/* ------------------------ */
+/* ------Contact Form------ */
+/* ------------------------ */
+
+
+.contact {
+	text-align:center;
+	padding:16px;
+	background-color: $charcoal;
+}
+
+.contactTitle {
+	display:inline-block;
+}
+
+.contactTitle h2 {
+	font-size:1.5em;
+	color: #fff;
+}
+
+.contactQuarter {
+	display:inline-block;
+	width:$quarter;
+	text-align:left;
+    margin: #{$med-gutter / 2};
+    margin-bottom:0;
+}
+
+.contactQuarter h4 {
+	color:#fff;	
+}
+
+input {
+    font-family:"OpenSansLt";
+    font-size:.95em;	
+    background-color:transparent;
+    color:#fff;
+    padding-left:4px;
+    @include input-placeholder {
+    	color:#ddd;
+    }
+    border: 1px $blue solid;
+}
+
+.contactAreaQuarter {
+	width:100%;
+	height:32px;
+}
+
+.contactHalf {
+	display:inline-block;
+	width:$quarter;
+    text-align:left;
+    margin: #{$med-gutter / 2};
+    margin-bottom:0;
+}
+
+.contactHalf h4 {
+	color:#fff;	
+}
+
+.contactAreaHalf {
+    width:100%;
+    height:32px;
+}
+
+textarea {
+    font-family:"OpenSansLt";
+    font-size:.95em;    
+    min-height:48px;	
+    background-color:transparent;
+    color:#fff;
+    padding-left:4px;
+    @include input-placeholder {
+    	color:#ddd;
+    }
+    border: 1px $blue solid;
+}
+
+.submitButton {
+	padding-top:7px;
+	color:#fff;
+	margin: #{$med-gutter / 2} auto;
+	box-sizing:border-box;
+	min-height:32px;
+	background-color:$blue;
+	width:#{$quarter / 2};
+}
+
+.submitButton:hover	{
+	cursor:pointer;
+	background-color:rgba($blue, .9);
+}
+
+.form-success {
+	color:#fff;
+}
+
+
 
 @media all and ($media-break-1) {
 	ul.tile-featured-products {
@@ -458,6 +569,26 @@ h3 {
 			border-top:$blue 1px solid;
 		}
 	}
+	
+	#contactForm {
+		max-width:#{$quarter * 2 + $med-gutter * 2.5};
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.contactHalf {
+		width:#{$quarter * 2 + $med-gutter};
+		height:104px;
+	}
+	
+	.contactAreaHalf {
+		height:80px;
+	}
+	
+	.enrollButton {
+		margin-left:auto;
+		//margin-left:calc(50% - #{$quarter * 2 + $med-gutter} / 2);
+	}
 }
 @media (min-width:575px) and (max-width:850px) {
 	.two ul {
@@ -513,9 +644,44 @@ h3 {
 }
 
 @media (min-width:1107px) {
-	.featured {
-		&.f4 {
+	ul.tile-featured-products {
+		width:calc( ( #{$quarter} + #{$med-gutter} ) * 3 );
+		& > li:nth-child(-n + 7){
 			display:inline-block;
+		}
+		& > li:nth-child(n){
+			position:absolute;
+		}
+		& > li:nth-child(3n - 2) {
+			left:0;
+		}
+		& > li:nth-child(3n - 1) {
+			left: calc(#{$quarter} + 1 * #{$med-gutter});
+		}
+		& > li:nth-child(3n) {
+			right:0;
+			left:initial;
+		}
+		& > li:nth-child(-n + 3) {
+			top:0;
+		}
+		& > li:nth-child(n + 4) {
+			bottom:0;
+		}
+		& > li {
+			@include transition-duration(0.750s);
+		}
+		/*	Handle the focus with :target ... or not	*/
+		& > li.clicked:target, & > li.clicked {
+			width:calc(#{$quarter * 3 + $med-gutter * 2} + 1px);
+			height:#{($quarter * 1.5) * 2 + $med-gutter};
+			left:0;
+		}
+		& > li.clicked:target, & > li:nth-child(3n).clicked {
+			width:calc(#{$quarter * 3 + $med-gutter * 2} + 1px);
+			height:#{($quarter * 1.5) * 2 + $med-gutter};
+			left:initial;
+			right:0;	
 		}
 	}
 	.two {
