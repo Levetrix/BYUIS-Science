@@ -5,7 +5,7 @@
 	<title>University Core and GE Courses - BYU Independent Study</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 	<script src="js/vendor/jquery.js"></script>
 	<script src="js/foundation/foundation.js"></script>
@@ -14,31 +14,13 @@
 	<script src="js/vendor/jquery-ui-1.11.0.js"></script>
 	<script src="js/foundation/foundation.js"></script>
 	<script src="js/foundation/foundation.offcanvas.js"></script>
-	<script src="js/animateReplace.jquery.js"></script>
-	<script src="js/counter.js"></script>
-	<script src="js/fadein.js"></script>
-	<script src="js/ge-data.js"></script>
+	<!--
+		<script src="js/animateReplace.jquery.js"></script>
+		<script src="js/counter.js"></script>
+		<script src="js/fadein.js"></script>
+		<script src="js/ge-data.js"></script>
+	-->
 	<script type="text/javascript" src="//is.byu.edu/site/resources/lead_submit.js"></script>
-
-	<script type="text/javascript"> 
-		/*
-		var init = function() {
-			var T2card = $('.T2card'),
-				flippers = $('.flip')
-			;
-			console.log("inited");
-			for(var i=0;i<flippers.length;i++) {
-				console.log("flipper i "+i);
-				console.log(flippers[i]);
-				$(flippers[i]).bind( 'click', function() {				
-					T2card.toggleClass('flipped');
-					console.log("Function ran, classname changed");
-				});
-			}
-		};
-		$(document).ready(function(){init();});
-		*/
-	</script>
 	
 	<script type="text/javascript">
 		var debug = false;
@@ -119,13 +101,64 @@
 		</aside>				
 		<!--	Begin Main Content	-->
 		<div class="maincontent">
-			<div class="stripe one">
-				<h2>Small Title Here</h2>
-				<h1>Big Fatty Long Title Goes<br />Here</h1>
+			<div class="stripe four">
+				<h2>Featured Courses</h2>
+				<ul class="tile-featured-products" id="featured-courses">
+					<li id="AAA-100" data-course-code="AAA-100" data-course-background="placeholders/placeholder1.jpg" class="clicked"><a href="#AAA-100">
+						<h2>Placeholder Course Title 1</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla vel libero ac consequat. Integer et libero nec ex consectetur luctus. Aenean gravida vehicula justo eu lacinia. Nam sit amet rutrum tortor. Vivamus et nunc imperdiet, hendrerit nisl et, rhoncus est. Nunc risus nulla, ultricies eu elit et, blandit tempus neque. Nullam a posuere lorem. Proin facilisis viverra tellus, a tempus nisl mattis eget.
+						</p>
+						<div class="shader">
+							<h3>AAA-100</h3>
+						</div>
+					</a></li>
+					<li id="AAA-101" data-course-code="AAA-101" data-course-background="placeholders/placeholder2.jpg" class="clicked"><a href="#AAA-101">
+						<h2>Title Placeholder 2</h2>
+						<div class="shader">
+							<h3>AAA-101</h3>
+						</div>
+					</a></li>
+					<li id="AAA-102" data-course-code="AAA-102" data-course-background="placeholders/placeholder3.jpg" class="clicked"><a href="#AAA-102">
+						<h2>Course Placeholder 3</h2>
+						<div class="shader">
+							<h3>AAA-102</h3>
+						</div>
+					</a></li>
+					<li id="AAA-103" data-course-code="AAA-103" data-course-background="placeholders/placeholder4.jpg" class="clicked"><a href="#AAA-103">			
+						<h2>Title of Placeholder 4</h2>
+						<div class="shader">
+							<h3>AAA-103</h3>
+						</div>
+					</a></li>
+					<li id="AAA-104" data-course-code="AAA-104" data-course-background="placeholders/placeholder5.jpg" class="clicked"><a href="#AAA-104">			
+						<div class="shader">
+							<h3>Course Place of Holding 5</h3>
+						</div>
+					</a></li>
+					<li id="AAA-105" data-course-code="AAA-105" data-course-background="placeholders/placeholder6.jpg" class="clicked"><a href="#AAA-105">			
+						<div class="shader">
+							<h3>Placeholding 106</h3>
+						</div>
+					</a></li>
+					<li id="AAA-106" data-course-code="AAA-106" data-course-background="placeholders/placeholder7.jpg" class="clicked"><a href="#AAA-106">			
+						<div class="shader">
+							<h3>Remove This Image 7</h3>
+						</div>
+					</a></li>
+					<li id="AAA-107" data-course-code="AAA-107" data-course-background="placeholders/placeholder8.jpg" class="clicked"><a href="#AAA-107">			
+						<div class="shader">
+							<h3>Last Placeholder, Part 8</h3>
+						</div>
+					</a></li>
+				</ul>
+			</div><div class="stripe three">
+				<h2>Over 200 courses available</h2>
+				<!-- <button class="scienceCat">Learn More</button> -->
+				<h2>Click <a href="">HERE</a> to learn more</h2>
 				<figure class="arrow"></figure>
-			</div>
-			<div class="stripe two">
-				<h2>Why choose BYU Independent Study?</h2>
+			</div><div class="stripe two">
+				<h2>Why choose BYU&nbsp;Independent&nbsp;Study?</h2>
 				<ul>
 					<li>Work at your own pace</li>
 					<li>Flixible classes that fit your schedule</li>
@@ -138,58 +171,16 @@
 					<li>Flixible classes that fit your schedule</li>
 				</ul>
 				<figure class="arrow"></figure>
-			</div>
-			<div class="stripe three">
-				<h2>Over 200 courses available</h2>
-				<!-- <button class="scienceCat">Learn More</button> -->
-				<h2>Click <a href="">HERE</a> to learn more</h2>
-				<figure class="arrow"></figure>
-			</div>
-			<div class="stripe four">
-				<h2>Featured Courses</h2>
-				<ul class="tile-featured-products">
-					<li id="AAA-100-M001" data-course-code="AAA-100-M001" data-course-background="placeholders/placeholder1.jpg" class="clicked"><a href="#AAA-100-M001" data-scroll data-options='{ "easing": "linear" }'>
-						<div class="shader">
-							<h3>Placeholder Course Title 1</h3>
-						</div>
-					</a></li>
-					<li id="AAA-101-M001" data-course-code="AAA-101-M001" data-course-background="placeholders/placeholder2.jpg" class="clicked"><a href="#AAA-101-M001" data-scroll data-options='{ "easing": "linear" }'>
-						<div class="shader">
-							<h3>Title Placeholder 2</h3>
-						</div>
-					</a></li>
-					<li id="AAA-102-M001" data-course-code="AAA-102-M001" data-course-background="placeholders/placeholder3.jpg" class="clicked"><a href="#AAA-102-M001" data-scroll data-options='{ "easing": "linear" }'>
-						<div class="shader">
-							<h3>Course Placeholder 3</h3>
-						</div>
-					</a></li>
-					<li id="AAA-103-M001" data-course-code="AAA-103-M001" data-course-background="placeholders/placeholder4.jpg" class="clicked"><a href="#AAA-103-M001" data-scroll data-options='{ "easing": "linear" }'>			
-						<div class="shader">
-							<h3>Title of Placeholder 4</h3>
-						</div>
-					</a></li>
-					<li id="AAA-104-M001" data-course-code="AAA-104-M001" data-course-background="placeholders/placeholder5.jpg" class="clicked"><a href="#AAA-104-M001" data-scroll data-options='{ "easing": "linear" }'>			
-						<div class="shader">
-							<h3>Course Place of Holding 5</h3>
-						</div>
-					</a></li>
-					<li id="AAA-105-M001" data-course-code="AAA-105-M001" data-course-background="placeholders/placeholder6.jpg" class="clicked"><a href="#AAA-105-M001" data-scroll data-options='{ "easing": "linear" }'>			
-						<div class="shader">
-							<h3>Placeholding 106</h3>
-						</div>
-					</a></li>
-					<li id="AAA-106-M001" data-course-code="AAA-106-M001" data-course-background="placeholders/placeholder7.jpg" class="clicked"><a href="#AAA-106-M001" data-scroll data-options='{ "easing": "linear" }'>			
-						<div class="shader">
-							<h3>Remove This Image 7</h3>
-						</div>
-					</a></li>
-					<li id="AAA-107-M001" data-course-code="AAA-107-M001" data-course-background="placeholders/placeholder8.jpg" class="clicked"><a href="#AAA-107-M001" data-scroll data-options='{ "easing": "linear" }'>			
-						<div class="shader">
-							<h3>Last Placeholder, Part 8</h3>
-						</div>
-					</a></li>
-				</ul>
-			</div>
+			</div><!--
+				<div class="stripe one">
+					<h2>Small Title Here</h2>
+					<h1>Big Fatty Long Title Goes<br />Here</h1>
+					<figure class="arrow"></figure>
+				</div>
+			-->
+			
+			
+			
 		</div>
 		
 		<!--	End Main Content -->
@@ -209,21 +200,7 @@
 </script>
 <script src='js/vendor/bind-polyfill.min.js'></script>
 <script src='js/vendor/smooth-scroll.min.js'></script>
-<script>
-	smoothScroll.init({
-		speed: 250,
-		easing: 'easeInOutCubic',
-		offset: 0,
-		updateURL: true,
-		callbackBefore: function ( toggle, anchor ) {
-			$(".clicked").removeClass("clicked");
-		},
-		callbackAfter: function ( toggle, anchor ) {
-			window.location.href = ""+anchor;
-			$(anchor).addClass("clicked")
-		}
-	});
-	$(".clicked").removeClass("clicked").click(function(){if(!$(this).hasClass("clicked")) $(this).find("a").get(0).click(); else $(this).removeClass("clicked")}).addClass("cursor-pointer");
-</script>
+<script src="js/customScroll.js"></script>
+<script src='js/catalogData.js'></script>
 </body>
 </html>

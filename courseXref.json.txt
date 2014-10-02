@@ -1,0 +1,31 @@
+{
+	"Featured Products": [
+		{
+			"pattern": "MMBIO-221",
+			"marketing-text": ""
+		},
+		{
+			"pattern": "PHSCS-127",
+			"marketing-text": ""
+		},
+		{
+			"pattern": "EARTH-041",
+			"marketing-text": ""
+		},
+		{
+			"pattern": "EARTH-043",
+			"marketing-text": ""
+		},
+		{
+			"pattern": "EXSC-221",
+			"marketing-text": ""
+		},
+		{
+			"pattern": "NDFS-100",
+			"marketing-text": ""
+		},
+		{
+			"pattern": "PDBIO-210",
+			"marketing-text": ""
+		}
+}

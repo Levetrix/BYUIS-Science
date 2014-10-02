@@ -37,10 +37,22 @@ $default-text-shadow-blur: 6px;
 $default-text-shadow-v-offset: 2px;
 $default-text-shadow-h-offset: 2px;
 
+$default-box-shadow-color: $black;
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 0px;
+$default-box-shadow-blur: 5px;
+$default-box-shadow-spread: null;
+$default-box-shadow-inset: inset;
+
 $OpenSans: "OpenSans", "OpenSans_IE";
 $OpenSansLt: "OpenSansLt", "OpenSansLt_IE";
 
+$media-break-0: "I`m not needed because you don`t media query everything!!";
 $media-break-1: "min-width:575px";
+$media-break-1-only: $media-break-1, " and max-width:850px";
+$media-break-2: "min-width:850px";
+$media-break-2-only: $media-break-2, " and max-width:1107px";
+
 
 @include font-face("OpenSans", font-files("../../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf"));
 @include font-face("OpenSansLt", font-files("../../fonts/opensans-light-webfont.ttf", "../fonts/opensans-light-webfont.woff", "../fonts/opensans-light-webfont.eot", "../fonts/opensans-light-webfont.svg"));
@@ -89,15 +101,15 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size:1.85em;
+	font-size:1.85rem;
 }
 
 h2 {
-	font-size:1.55em;
+	font-size:1.55rem;
 }
 
 h3 {
-	font-size:1.25em;
+	font-size:1.25rem;
 }
 
 .cursor-pointer {
@@ -222,86 +234,120 @@ h3 {
 		height:calc( 1.5 * #{$quarter});
 		display: inline-block;
 		margin:calc(#{$med-gutter} / 2);
+		padding-top:calc(55px + #{$med-gutter});
 		z-index:1;
 		position:relative;
 		background-size:cover;
+		overflow:hidden;
 		
 		@include transition-property(width height left z-index);
 		@include transition-timing-function(ease);
 		@include transition-duration(0.250s);
 		
+		/*	Styling for contents of the tile (hidden initially)	*/
+		& h2 {
+			font-size: 1.55rem;
+		}
+		& p {
+			text-align: left;
+			margin: 1rem;
+			text-decoration:none;
+			color: $black;
+			max-height: calc( 100% - 1.55rem - #{$med-gutter} - 1rem );
+			overflow:hidden;
+			z-index:1;
+		}
+		&.clicked p:after {
+			content:"";
+			z-index:2;
+			@include box-shadow(0 -45px 15px 0 #272328 inset);
+			height: 55px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		
+		/*	Background images (shown initially, hidden with click)	*/
 		&:after {
 			content: "";
-			opacity: 0;
+			opacity: 1;
 			top: 0;
 			left: 0;
 			bottom: 0;
 			right: 0;
 			position: absolute;
-			z-index: 0;   
+			z-index: 1;   
+			background-size:cover;
+			
 			@include transition-property(opacity);
 			@include transition-timing-function(ease);
 			@include transition-duration(0.750s);
 		}
-		/*	Handle the focus with :target	*/
-		&.clicked:target {
-			width:calc(100% + #{$med-gutter * 3});
-			left:#{$med-gutter * -2};
+		/*	Handle the focus with :target ... or not	*/
+		&.clicked:target, &.clicked {
+			width:calc(100% + #{$med-gutter * 2});
+			left:#{$med-gutter * -1.5};
 			&:after {
-				opacity:1;
+				opacity:0;
+				z-index:0;
+			}
+			& .shader {
+				bottom:calc( 1.5 * #{$quarter} - 55px);
 			}
 		}
 		/*	First 4 tiles styles!	*/
 		&:nth-child(1) {
-			background-image: url(../img/placeholders/placeholder1.jpg);
+			background-color:teal;
 			&:after {
-				background-color:teal;
+				background-image: url(../img/placeholders/placeholder1.jpg);
 			}
 		}
 		&:nth-child(2) {
-			background-image: url(../img/placeholders/placeholder2.jpg);
+			background-color:$yellow;
+			& p:after {
+			}
 			&:after {
-				background-color:$yellow;
+				background-image: url(../img/placeholders/placeholder2.jpg);
 			}
 		}
 		&:nth-child(3) {
-			background-image: url(../img/placeholders/placeholder3.jpg);
+			background-color:grey;
 			&:after {
-				background-color:grey;
+				background-image: url(../img/placeholders/placeholder3.jpg);
 			}
 		}
 		&:nth-child(4) {
-			background-image: url(../img/placeholders/placeholder4.jpg);
+			background-color:$red;
 			&:after {
-				background-color:$red;
-				
+				background-image: url(../img/placeholders/placeholder4.jpg);
 			}
 		}
 		&:nth-child(5) {
-			background-image: url(../img/placeholders/placeholder5.jpg);
+			background-color:$red;
 			&:after {
-				background-color:$red;
+				background-image: url(../img/placeholders/placeholder5.jpg);
 				
 			}
 		}
 		&:nth-child(6) {
-			background-image: url(../img/placeholders/placeholder6.jpg);
+			background-color:$red;
 			&:after {
-				background-color:$red;
+				background-image: url(../img/placeholders/placeholder6.jpg);
 				
 			}
 		}
 		&:nth-child(7) {
-			background-image: url(../img/placeholders/placeholder7.jpg);
+			background-color:$red;
 			&:after {
-				background-color:$red;
+				background-image: url(../img/placeholders/placeholder7.jpg);
 				
 			}
 		}
 		&:nth-child(8) {
-			background-image: url(../img/placeholders/placeholder8.jpg);
+			background-color:$red;
 			&:after {
-				background-color:$red;
+				background-image: url(../img/placeholders/placeholder8.jpg);
 				
 			}
 		}
@@ -317,7 +363,10 @@ h3 {
 			width:100%;
 			height:55px;
 			background-color:rgba($charcoal, .55);
-			z-index: 2;   
+			z-index: 3;   
+			@include transition-property(bottom);
+			@include transition-timing-function(ease);
+			@include transition-duration(0.750s);
 			
 			& h3 {
 				color:#fff;
@@ -327,33 +376,50 @@ h3 {
 		}
 	}
 }
+.hidden-scroll-anchor {
+	height:0;
+	position:absolute;
+	overflow:hidden;
+}
+
 @media all and ($media-break-1) {
 	ul.tile-featured-products {
 		position:relative;
 		display:block;
 		width:#{$quarter * 2 + $med-gutter * 2};
 		height:100%;
-		min-height:#{$quarter * 3.5};
+		min-height:#{($quarter * 1.5 + $med-gutter) * 2};
 		margin-left:auto;
 		margin-right:auto;
 		
 		
 		& > li {
-			display:inline-block;
+			display:block;
 			width:calc( 50% - $med-gutter );
 			height:calc( 50% - $med-gutter );
 			display: block;
 			position:absolute;
 			
 			@include transition-duration(0.750s);
+			 
+			/* & > div {
+				display:none;
+			}*/
 		}
 		
-		/*	Handle the focus with :target	*/
-		& > li.clicked:target {
-			width:calc( 101% - #{$med-gutter} );
-			height:calc( 101% - #{$med-gutter} );
+		/*	Handle the focus with :target ... or not	*/
+		& > li.clicked:target, & > li.clicked {
+			width:#{$quarter * 2 + $med-gutter * 1};
+			height:#{($quarter * 1.5) * 2 + $med-gutter};
 			left:auto;
 			z-index: 3;
+			
+			/* & > * {
+				display:block;
+			}*/
+			& .shader {
+				bottom:calc(#{($quarter * 1.5) * 2 + $med-gutter} - 55px);
+			}
 		}
 		/*	First 4 tiles styles!	*/
 		& > li:nth-child(1) {
