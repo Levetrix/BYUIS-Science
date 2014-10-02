@@ -283,21 +283,22 @@ h3 {
 		&:before {
 			position: absolute;
 			bottom: $med-gutter;
-			/*left: #{ ($quarter + ($med-gutter * 2)) / 2 };*/ 
+			left: calc( 50% - #{ $med-gutter * 2 } );
 			margin-left:auto;
 			margin-right:auto;
 			z-index: 4;
 			
-			height: 3rem;
-			width:	#{ $med-gutter * 2 };
+			height: 2rem;
+			width:	#{ $med-gutter * 4 };
+			padding: 0.2rem;
 			
 			content: "More Info";
 			background-color:$blue;
 			
 		  @include background-image(linear-gradient(to bottom right, $blue, $teal));
-		  @include border-radius(1.5rem);
+		  @include border-radius(1rem);
 			
-			opacity: 1;
+			opacity: 0;
 			@include transition-property(opacity);
 			@include transition-timing-function(ease);
 			@include transition-duration(0.750s);
@@ -314,7 +315,7 @@ h3 {
 			z-index: 1;   
 			background-size:cover;
 			
-			@include transition-property(opacity);
+			@include transition-property(opacity z-index);
 			@include transition-timing-function(ease);
 			@include transition-duration(0.750s);
 		}
@@ -325,6 +326,10 @@ h3 {
 			&:after {
 				opacity:0;
 				z-index:0;
+			}
+			&:before {
+				opacity:1;
+				z-index:4;
 			}
 			& .shader {
 				bottom:calc( 1.5 * #{$quarter} - 55px);
