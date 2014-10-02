@@ -3834,19 +3834,19 @@ ul.off-canvas-list li a:hover {
   src: url('fonts/../fonts/opensans-regular-webfont.eot') format('embedded-opentype'), url('fonts/examples/bgrove.otf') format('opentype');
 }
 
-/* line 65, ../sass/main.scss */
+/* line 67, ../sass/main.scss */
 html, body {
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
-/* line 71, ../sass/main.scss */
+/* line 73, ../sass/main.scss */
 body {
   font-family: "OpenSansLt", "OpenSansLt_IE";
 }
 
-/* line 75, ../sass/main.scss */
+/* line 77, ../sass/main.scss */
 div, figure, ul, li {
   padding: 0;
   margin: 0;
@@ -3854,12 +3854,16 @@ div, figure, ul, li {
   /*@include box-sizing(border-box)*/
 }
 
+<<<<<<< HEAD
 /* line 83, ../sass/main.scss */
 a {
   color: #66b9e3;
 }
 
 /* line 91, ../sass/main.scss */
+=======
+/* line 89, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 p {
   margin: 0;
   padding: 0;
@@ -3868,7 +3872,11 @@ p {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 /* line 97, ../sass/main.scss */
+=======
+/* line 95, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 h1, h2, h3, h4 {
   font-family: "OpenSansLt", "OpenSansLt_IE";
   font-size: 16px;
@@ -3881,40 +3889,68 @@ h1, h2, h3, h4 {
   display: block;
 }
 
+<<<<<<< HEAD
 /* line 107, ../sass/main.scss */
+=======
+/* line 105, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 h1 {
   font-size: 1.85rem;
 }
 
+<<<<<<< HEAD
 /* line 111, ../sass/main.scss */
+=======
+/* line 109, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 h2 {
   font-size: 1.55rem;
 }
 
+<<<<<<< HEAD
 /* line 115, ../sass/main.scss */
+=======
+/* line 113, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 h3 {
   font-size: 1.25rem;
 }
 
+<<<<<<< HEAD
 /* line 119, ../sass/main.scss */
+=======
+/* line 117, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .cursor-pointer {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* line 127, ../sass/main.scss */
+=======
+/* line 125, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .stripe {
   text-align: center;
   position: relative;
   padding: 2.01rem;
 }
 
+<<<<<<< HEAD
 /* line 134, ../sass/main.scss */
+=======
+/* line 132, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .one {
   background-color: lightgrey;
   min-height: 500px;
 }
 
+<<<<<<< HEAD
 /* line 147, ../sass/main.scss */
+=======
+/* line 145, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .arrow {
   display: none;
   background-color: #872633;
@@ -3926,13 +3962,21 @@ h3 {
   margin-bottom: 0.769rem;
 }
 
+<<<<<<< HEAD
 /* line 163, ../sass/main.scss */
+=======
+/* line 160, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .two h2 {
   max-width: 300px;
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 /* line 168, ../sass/main.scss */
+=======
+/* line 165, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .two ul {
   list-style-type: none;
   margin: 0 auto;
@@ -3952,7 +3996,11 @@ h3 {
   display: -webkit-flex;
   display: flex;
 }
+<<<<<<< HEAD
 /* line 184, ../sass/main.scss */
+=======
+/* line 181, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .two ul li {
   display: block;
   -webkit-box-flex: 1 calc(100% - 2.01rem);
@@ -3974,11 +4022,19 @@ h3 {
   
   }*/
 }
+<<<<<<< HEAD
 /* line 202, ../sass/main.scss */
 .two ul li:first-child {
   border-top: #66b9e3 1px solid;
 }
 /* line 206, ../sass/main.scss */
+=======
+/* line 199, ../sass/main.scss */
+.two ul li:first-child {
+  border-top: #66b9e3 1px solid;
+}
+/* line 203, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .two ul li:after {
   -webkit-box-flex: 1 100%;
   -moz-box-flex: 1 100%;
@@ -3992,12 +4048,20 @@ h3 {
   display: none;
 }
 
+<<<<<<< HEAD
 /* line 219, ../sass/main.scss */
+=======
+/* line 216, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .two li:nth-child(n + 5) {
   display: none;
 }
 
+<<<<<<< HEAD
 /* line 223, ../sass/main.scss */
+=======
+/* line 220, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .three {
   background-color: #323232;
   color: #fff;
@@ -4008,12 +4072,20 @@ h3 {
   color: #fff;
 }
 
+<<<<<<< HEAD
 /* line 232, ../sass/main.scss */
+=======
+/* line 224, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .three h2:first-child {
   margin-bottom: 0.769rem;
 }
 
+<<<<<<< HEAD
 /* line 241, ../sass/main.scss */
+=======
+/* line 233, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .tile-featured-products li {
   display: inline-block;
   width: 13.8125rem;
@@ -4044,11 +4116,19 @@ h3 {
   /*	All other tiles hidden	*/
   /*	Now for the content styling	*/
 }
+<<<<<<< HEAD
 /* line 258, ../sass/main.scss */
 .tile-featured-products li h2 {
   font-size: 1.55rem;
 }
 /* line 261, ../sass/main.scss */
+=======
+/* line 250, ../sass/main.scss */
+.tile-featured-products li h2 {
+  font-size: 1.55rem;
+}
+/* line 253, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .tile-featured-products li p {
   text-align: left;
   margin: 1rem;
@@ -4058,20 +4138,28 @@ h3 {
   overflow: hidden;
   z-index: 1;
 }
+<<<<<<< HEAD
 /* line 270, ../sass/main.scss */
+=======
+/* line 262, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .tile-featured-products li.clicked p:after {
   content: "";
   z-index: 2;
-  -webkit-box-shadow: 0 -45px 15px 0 #272328 inset;
-  -moz-box-shadow: 0 -45px 15px 0 #272328 inset;
-  box-shadow: 0 -45px 15px 0 #272328 inset;
+  -webkit-box-shadow: inset 0px -45px 15px 0px #272328;
+  -moz-box-shadow: inset 0px -45px 15px 0px #272328;
+  box-shadow: inset 0px -45px 15px 0px #272328;
   height: 55px;
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
 }
+<<<<<<< HEAD
 /* line 282, ../sass/main.scss */
+=======
+/* line 274, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .tile-featured-products li:after {
   content: "";
   opacity: 1;
@@ -4095,16 +4183,25 @@ h3 {
   -o-transition-duration: 0.75s;
   transition-duration: 0.75s;
 }
+<<<<<<< HEAD
 /* line 298, ../sass/main.scss */
+=======
+/* line 290, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .tile-featured-products li.clicked:target, .tile-featured-products li.clicked {
   width: calc(100% + 4.02rem);
   left: -3.015rem;
 }
+<<<<<<< HEAD
 /* line 301, ../sass/main.scss */
+=======
+/* line 293, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .tile-featured-products li.clicked:target:after, .tile-featured-products li.clicked:after {
   opacity: 0;
   z-index: 0;
 }
+<<<<<<< HEAD
 /* line 305, ../sass/main.scss */
 .tile-featured-products li.clicked:target .shader, .tile-featured-products li.clicked .shader {
   bottom: calc(1.5 * 13.8125rem - 55px);
@@ -4126,9 +4223,45 @@ h3 {
   background-image: url(../img/placeholders/placeholder2.jpg);
 }
 /* line 324, ../sass/main.scss */
-.tile-featured-products li:nth-child(3) {
-  background-color: grey;
+=======
+/* line 297, ../sass/main.scss */
+.tile-featured-products li.clicked:target .shader, .tile-featured-products li.clicked .shader {
+  bottom: calc(1.5 * 13.8125rem - 55px);
 }
+/* line 302, ../sass/main.scss */
+.tile-featured-products li:nth-child(1) {
+  background-color: teal;
+}
+/* line 304, ../sass/main.scss */
+.tile-featured-products li:nth-child(1) p:after {
+  -webkit-box-shadow: 0px -45px 15px 0px teal inset;
+  -moz-box-shadow: 0px -45px 15px 0px teal inset;
+  box-shadow: 0px -45px 15px 0px teal inset;
+}
+/* line 307, ../sass/main.scss */
+.tile-featured-products li:nth-child(1):after {
+  background-image: url(../img/placeholders/placeholder1.jpg);
+}
+/* line 311, ../sass/main.scss */
+.tile-featured-products li:nth-child(2) {
+  background-color: #dfb655;
+}
+/* line 313, ../sass/main.scss */
+.tile-featured-products li:nth-child(2) p:after {
+  -webkit-box-shadow: 0px -45px 15px 0px #dfb655 inset;
+  -moz-box-shadow: 0px -45px 15px 0px #dfb655 inset;
+  box-shadow: 0px -45px 15px 0px #dfb655 inset;
+}
+/* line 316, ../sass/main.scss */
+.tile-featured-products li:nth-child(2):after {
+  background-image: url(../img/placeholders/placeholder2.jpg);
+}
+/* line 320, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
+.tile-featured-products li:nth-child(3) {
+  background-color: lightgrey;
+}
+<<<<<<< HEAD
 /* line 326, ../sass/main.scss */
 .tile-featured-products li:nth-child(3):after {
   background-image: url(../img/placeholders/placeholder3.jpg);
@@ -4174,10 +4307,97 @@ h3 {
   background-image: url(../img/placeholders/placeholder8.jpg);
 }
 /* line 365, ../sass/main.scss */
+=======
+/* line 322, ../sass/main.scss */
+.tile-featured-products li:nth-child(3) p:after {
+  -webkit-box-shadow: 0px -45px 15px 0px lightgrey inset;
+  -moz-box-shadow: 0px -45px 15px 0px lightgrey inset;
+  box-shadow: 0px -45px 15px 0px lightgrey inset;
+}
+/* line 325, ../sass/main.scss */
+.tile-featured-products li:nth-child(3):after {
+  background-image: url(../img/placeholders/placeholder3.jpg);
+}
+/* line 329, ../sass/main.scss */
+.tile-featured-products li:nth-child(4) {
+  background-color: #872633;
+}
+/* line 331, ../sass/main.scss */
+.tile-featured-products li:nth-child(4) p:after {
+  -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
+  -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
+  box-shadow: 0px -45px 15px 0px #872633 inset;
+}
+/* line 334, ../sass/main.scss */
+.tile-featured-products li:nth-child(4):after {
+  background-image: url(../img/placeholders/placeholder4.jpg);
+}
+/* line 338, ../sass/main.scss */
+.tile-featured-products li:nth-child(5) {
+  background-color: #872633;
+}
+/* line 340, ../sass/main.scss */
+.tile-featured-products li:nth-child(5) p:after {
+  -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
+  -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
+  box-shadow: 0px -45px 15px 0px #872633 inset;
+}
+/* line 343, ../sass/main.scss */
+.tile-featured-products li:nth-child(5):after {
+  background-image: url(../img/placeholders/placeholder5.jpg);
+}
+/* line 348, ../sass/main.scss */
+.tile-featured-products li:nth-child(6) {
+  background-color: #872633;
+}
+/* line 350, ../sass/main.scss */
+.tile-featured-products li:nth-child(6) p:after {
+  -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
+  -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
+  box-shadow: 0px -45px 15px 0px #872633 inset;
+}
+/* line 353, ../sass/main.scss */
+.tile-featured-products li:nth-child(6):after {
+  background-image: url(../img/placeholders/placeholder6.jpg);
+}
+/* line 358, ../sass/main.scss */
+.tile-featured-products li:nth-child(7) {
+  background-color: #872633;
+}
+/* line 360, ../sass/main.scss */
+.tile-featured-products li:nth-child(7) p:after {
+  -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
+  -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
+  box-shadow: 0px -45px 15px 0px #872633 inset;
+}
+/* line 363, ../sass/main.scss */
+.tile-featured-products li:nth-child(7):after {
+  background-image: url(../img/placeholders/placeholder7.jpg);
+}
+/* line 368, ../sass/main.scss */
+.tile-featured-products li:nth-child(8) {
+  background-color: #872633;
+}
+/* line 370, ../sass/main.scss */
+.tile-featured-products li:nth-child(8) p:after {
+  -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
+  -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
+  box-shadow: 0px -45px 15px 0px #872633 inset;
+}
+/* line 373, ../sass/main.scss */
+.tile-featured-products li:nth-child(8):after {
+  background-image: url(../img/placeholders/placeholder8.jpg);
+}
+/* line 379, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .tile-featured-products li:nth-child(n+5) {
   display: none;
 }
+<<<<<<< HEAD
 /* line 369, ../sass/main.scss */
+=======
+/* line 384, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .tile-featured-products li .shader {
   position: absolute;
   bottom: 0;
@@ -4198,14 +4418,22 @@ h3 {
   -o-transition-duration: 0.75s;
   transition-duration: 0.75s;
 }
+<<<<<<< HEAD
 /* line 380, ../sass/main.scss */
+=======
+/* line 395, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .tile-featured-products li .shader h3 {
   color: #fff;
   padding-top: 0.769rem;
   line-height: 1em;
 }
 
+<<<<<<< HEAD
 /* line 389, ../sass/main.scss */
+=======
+/* line 403, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .hidden-scroll-anchor {
   height: 0;
   position: absolute;
@@ -4357,7 +4585,11 @@ textarea::-webkit-input-placeholder {
 }
 
 @media all and (min-width: 575px) {
+<<<<<<< HEAD
   /* line 496, ../sass/main.scss */
+=======
+  /* line 410, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   ul.tile-featured-products {
     position: relative;
     display: block;
@@ -4369,7 +4601,11 @@ textarea::-webkit-input-placeholder {
     /*	Handle the focus with :target ... or not	*/
     /*	First 4 tiles styles!	*/
   }
+<<<<<<< HEAD
   /* line 506, ../sass/main.scss */
+=======
+  /* line 420, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   ul.tile-featured-products > li {
     display: block;
     width: calc(50% - $med-gutter );
@@ -4384,7 +4620,11 @@ textarea::-webkit-input-placeholder {
     	display:none;
     }*/
   }
+<<<<<<< HEAD
   /* line 521, ../sass/main.scss */
+=======
+  /* line 435, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   ul.tile-featured-products > li.clicked:target, ul.tile-featured-products > li.clicked {
     width: 29.635rem;
     height: 43.4475rem;
@@ -4394,42 +4634,74 @@ textarea::-webkit-input-placeholder {
     	display:block;
     }*/
   }
+<<<<<<< HEAD
   /* line 530, ../sass/main.scss */
   ul.tile-featured-products > li.clicked:target .shader, ul.tile-featured-products > li.clicked .shader {
     bottom: calc(43.4475rem - 55px);
   }
   /* line 535, ../sass/main.scss */
+=======
+  /* line 444, ../sass/main.scss */
+  ul.tile-featured-products > li.clicked:target .shader, ul.tile-featured-products > li.clicked .shader {
+    bottom: calc(43.4475rem - 55px);
+  }
+  /* line 449, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   ul.tile-featured-products > li:nth-child(1) {
     top: 0;
     left: 0;
   }
+<<<<<<< HEAD
   /* line 539, ../sass/main.scss */
+=======
+  /* line 453, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   ul.tile-featured-products > li:nth-child(2) {
     top: 0;
     right: 0;
   }
+<<<<<<< HEAD
   /* line 543, ../sass/main.scss */
+=======
+  /* line 457, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   ul.tile-featured-products > li:nth-child(3) {
     bottom: 0;
     left: 0;
   }
+<<<<<<< HEAD
   /* line 547, ../sass/main.scss */
+=======
+  /* line 461, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   ul.tile-featured-products > li:nth-child(4) {
     bottom: 0;
     right: 0;
   }
 }
+<<<<<<< HEAD
 /* line 554, ../sass/main.scss */
+=======
+/* line 468, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
 .f4 {
   display: none;
 }
 
 @media (min-width: 575px) {
+<<<<<<< HEAD
   /* line 563, ../sass/main.scss */
   .two li:nth-child(-n + 8) {
     display: block;
   }
   /* line 567, ../sass/main.scss */
+=======
+  /* line 477, ../sass/main.scss */
+  .two li:nth-child(-n + 8) {
+    display: block;
+  }
+  /* line 481, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .two li:nth-child(2) {
     border-top: #66b9e3 1px solid;
   }
@@ -4458,11 +4730,19 @@ textarea::-webkit-input-placeholder {
   }
 }
 @media (min-width: 575px) and (max-width: 850px) {
+<<<<<<< HEAD
   /* line 593, ../sass/main.scss */
   .two ul {
     width: calc(2 * 13.8125rem + 2.01rem);
   }
   /* line 596, ../sass/main.scss */
+=======
+  /* line 487, ../sass/main.scss */
+  .two ul {
+    width: calc(2 * 13.8125rem + 2.01rem);
+  }
+  /* line 490, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .two ul li {
     -webkit-box-flex: 1 calc(50% - 2.01rem);
     -moz-box-flex: 1 calc(50% - 2.01rem);
@@ -4471,18 +4751,30 @@ textarea::-webkit-input-placeholder {
     flex: 1 calc(50% - 2.01rem);
   }
 
+<<<<<<< HEAD
   /* line 602, ../sass/main.scss */
+=======
+  /* line 496, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .featured.f4 {
     display: inline-block;
   }
 }
 @media (min-width: 850px) and (max-width: 1107px) {
+<<<<<<< HEAD
   /* line 610, ../sass/main.scss */
+=======
+  /* line 504, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .two ul {
     width: calc(3 * 13.8125rem + 2.01rem * 2);
   }
 
+<<<<<<< HEAD
   /* line 614, ../sass/main.scss */
+=======
+  /* line 508, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .two {
     /*& li:nth-child {
     	padding-top:$med-gutter;
@@ -4490,7 +4782,11 @@ textarea::-webkit-input-placeholder {
     	top:-1px; 
     }*/
   }
+<<<<<<< HEAD
   /* line 615, ../sass/main.scss */
+=======
+  /* line 509, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .two ul li {
     -webkit-box-flex: 1 calc(33% - 2.01rem);
     -moz-box-flex: 1 calc(33% - 2.01rem);
@@ -4498,21 +4794,34 @@ textarea::-webkit-input-placeholder {
     -ms-flex: 1 calc(33% - 2.01rem);
     flex: 1 calc(33% - 2.01rem);
   }
+<<<<<<< HEAD
   /* line 618, ../sass/main.scss */
   .two ul li:nth-child(3) {
     border-top: solid #66b9e3 1px;
   }
   /* line 626, ../sass/main.scss */
+=======
+  /* line 512, ../sass/main.scss */
+  .two ul li:nth-child(3) {
+    border-top: solid #66b9e3 1px;
+  }
+  /* line 520, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .two li:nth-child(n) {
     display: block;
   }
 
+<<<<<<< HEAD
   /* line 638, ../sass/main.scss */
+=======
+  /* line 532, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .featured.f4 {
     display: none;
   }
 }
 @media (min-width: 1107px) {
+<<<<<<< HEAD
   /* line 646, ../sass/main.scss */
   ul.tile-featured-products {
     width: calc(( 13.8125rem + 2.01rem ) * 3 );
@@ -4520,6 +4829,10 @@ textarea::-webkit-input-placeholder {
   }
   /* line 649, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(-n + 7) {
+=======
+  /* line 541, ../sass/main.scss */
+  .featured.f4 {
+>>>>>>> origin/thursday-changes
     display: inline-block;
   }
   /* line 652, ../sass/main.scss */
@@ -4568,11 +4881,19 @@ textarea::-webkit-input-placeholder {
     right: 0;
   }
 
+<<<<<<< HEAD
   /* line 688, ../sass/main.scss */
   .two ul {
     width: calc(4 * 13.8125rem + 2.01rem * 3);
   }
   /* line 691, ../sass/main.scss */
+=======
+  /* line 546, ../sass/main.scss */
+  .two ul {
+    width: calc(4 * 13.8125rem + 2.01rem * 3);
+  }
+  /* line 549, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .two ul li {
     -webkit-box-flex: 1 calc(25% - 2.01rem);
     -moz-box-flex: 1 calc(25% - 2.01rem);
@@ -4580,11 +4901,19 @@ textarea::-webkit-input-placeholder {
     -ms-flex: 1 calc(25% - 2.01rem);
     flex: 1 calc(25% - 2.01rem);
   }
+<<<<<<< HEAD
   /* line 694, ../sass/main.scss */
   .two ul li:nth-child(-n + 4) {
     border-top: solid #66b9e3 1px;
   }
   /* line 698, ../sass/main.scss */
+=======
+  /* line 552, ../sass/main.scss */
+  .two ul li:nth-child(-n + 4) {
+    border-top: solid #66b9e3 1px;
+  }
+  /* line 556, ../sass/main.scss */
+>>>>>>> origin/thursday-changes
   .two ul li:nth-child(9) {
     display: none;
   }
