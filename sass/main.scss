@@ -18,13 +18,15 @@
 
 @import "flexbox/flexbox";
 
-$green: #3c5346;
+$green: rgba(#3c5346,1);
 $red: #872633;
 $yellow: #dfb655;
-$black: #272328; 
+$black: #272328;
+$grey: #D3D3D3;
 $purple: #2a1f26;
 $white: #f9f9f9;
 $blue: #66B9E3;
+$teal: rgb(0,128,128);
 $charcoal: #323232;
 
 $quarter: 13.8125rem;
@@ -39,9 +41,9 @@ $default-text-shadow-h-offset: 2px;
 
 $default-box-shadow-color: $black;
 $default-box-shadow-h-offset: 0px;
-$default-box-shadow-v-offset: 0px;
-$default-box-shadow-blur: 5px;
-$default-box-shadow-spread: null;
+$default-box-shadow-v-offset: -45px;
+$default-box-shadow-blur: 15px;
+$default-box-shadow-spread: 0px;
 $default-box-shadow-inset: inset;
 
 $OpenSans: "OpenSans", "OpenSans_IE";
@@ -260,7 +262,7 @@ h3 {
 		&.clicked p:after {
 			content:"";
 			z-index:2;
-			@include box-shadow(0 -45px 15px 0 #272328 inset);
+			@include box-shadow();
 			height: 55px;
 			width: 100%;
 			position: absolute;
@@ -298,7 +300,10 @@ h3 {
 		}
 		/*	First 4 tiles styles!	*/
 		&:nth-child(1) {
-			background-color:teal;
+			background-color: $teal;
+			& p:after {
+				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $teal inset);
+			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder1.jpg);
 			}
@@ -306,25 +311,35 @@ h3 {
 		&:nth-child(2) {
 			background-color:$yellow;
 			& p:after {
+				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $yellow inset);
 			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder2.jpg);
 			}
 		}
 		&:nth-child(3) {
-			background-color:grey;
+			background-color:$grey;
+			& p:after {
+				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $grey inset);
+			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder3.jpg);
 			}
 		}
 		&:nth-child(4) {
 			background-color:$red;
+			& p:after {
+				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
+			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder4.jpg);
 			}
 		}
 		&:nth-child(5) {
 			background-color:$red;
+			& p:after {
+				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
+			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder5.jpg);
 				
@@ -332,6 +347,9 @@ h3 {
 		}
 		&:nth-child(6) {
 			background-color:$red;
+			& p:after {
+				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
+			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder6.jpg);
 				
@@ -339,6 +357,9 @@ h3 {
 		}
 		&:nth-child(7) {
 			background-color:$red;
+			& p:after {
+				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
+			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder7.jpg);
 				
@@ -346,6 +367,9 @@ h3 {
 		}
 		&:nth-child(8) {
 			background-color:$red;
+			& p:after {
+				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
+			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder8.jpg);
 				
