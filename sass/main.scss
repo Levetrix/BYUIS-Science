@@ -363,7 +363,6 @@ h3 {
 		}
 		/*	All other tiles hidden	*/
 		&:nth-child(n+5) {
-			background-color:$black;
 			display:none;
 		}
 		/*	Now for the content styling	*/
@@ -646,6 +645,7 @@ textarea {
 @media (min-width:1107px) {
 	ul.tile-featured-products {
 		width:calc( ( #{$quarter} + #{$med-gutter} ) * 3 );
+		
 		& > li:nth-child(-n + 7){
 			display:inline-block;
 		}
@@ -677,7 +677,7 @@ textarea {
 			height:#{($quarter * 1.5) * 2 + $med-gutter};
 			left:0;
 		}
-		& > li.clicked:target, & > li:nth-child(3n).clicked {
+		& > li.clicked:nth-child(3n):target, & > li:nth-child(3n).clicked {
 			width:calc(#{$quarter * 3 + $med-gutter * 2} + 1px);
 			height:#{($quarter * 1.5) * 2 + $med-gutter};
 			left:initial;
