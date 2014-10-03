@@ -13,7 +13,7 @@ var showdebug=true,
 	clickTileHandler = function() {
 		if(showdebug) console.log("clicked a tile!");
 		if(!$(this).hasClass("clicked"))
-			$(this).find("a").get(0).click();
+			$(this).find("> a").get(0).click();
 		else
 			$(this).removeClass("clicked");
 },
@@ -39,19 +39,32 @@ var showdebug=true,
 smoothScroll.init(ssOptions);
 //	Change the anchors with javascript for users that have it available.
 $(window).resize(function() {
-	var fcYOffset = $("#featured-courses").parent().find("h2").offset().top+"px";
-	$("#featured-courses li,a").off(".tileScroll");
 	if(showdebug) console.log("window resized!");
-	if(showdebug) console.log($("#featured-courses").parent().height()+" <= "+$(window).height());
-	if(showdebug) console.log($("#featured-courses").parent().height() <= $(window).height());
-	$(".clicked").removeClass("clicked").addClass("cursor-pointer");
+	//	The y-position of the featured courses element will be scrolled to on the larger breakpoints
+	var fcYOffset = $("#featured-courses").parent().find("h2").offset().top+"px";
+	//	Unassign the event handlers if they are there - they are re-assigned below
+	$("#featured-courses li,#featured-courses li > a").off(".tileScroll");
+	
+	//	The clicked class is removed to allow the user to see additional tiles
+	$(".clicked").removeClass("clicked");
+	
+	//	If the cursor-pointer isn't on the li elements, add it (this is not present in the HTML because the tiles are not "hot" or clickable without javascript so the UI feedback that would indicate clickableness would be inappropriate)
+	if(!$("#featured-courses li").hasClass("cursor-pointer")) $("#featured-courses li").addClass("cursor-pointer");
+	
+	//	Attach the click handler to the tiles
 	$("#featured-courses li").on("click.tileScroll",clickTileHandler);
+	
+	//	Remove the scroll anchors, because they will be added in the loop below according to breakpoint logic
 	$(".hidden-scroll-anchor").remove();
-	$("a").each(function() {
+	//	Loop through the anchors to update the scroll anchors and remove typical hash scrolling behavior
+	$("#featured-courses a").each(function() {
 		var $this = $(this),
 			href = $this.attr("href") || $this.attr("data-href");
-		//	Only needed if the anchor has an "href" attribute
-		if(href) {
+		//	Only needed if the anchor has an "href" attribute (or an href that has already been moved to "data-href" attribute
+		if($this.parent()[0].tagName.toLowerCase() == "button") {
+			if(showdebug) console.log("This is a button link: " + href + "\n" + $this[0].tagName);
+			if(showdebug) console.log($this);
+		} else if(href) {
 			//	Also only if the "href" begins with a hash (meaning it is an in-page link)
 			if(href.substring(0,1) == "#") {
 				//	Move the data into a data attribute (removes the typical scroll behavior)
@@ -62,7 +75,7 @@ $(window).resize(function() {
 				$this.on("click.tileScroll", clickHashLink);
 				
 				//	Move the id ... it will be used on the new scroll element
-				$(href).attr("id",(href+"-moved").substr(1));
+				$this.parent().attr("id",(href+"-moved").substr(1));
 				//	Only change the scroll height behavior different for the smallest breakpoint
 				var newScrollAnchor = $('<div class="hidden-scroll-anchor">&nbsp;</div>').attr("id",href.substr(1));
 				if(575 < $(window).width()) {
@@ -71,6 +84,7 @@ $(window).resize(function() {
 				} else {
 					$("body").prepend(newScrollAnchor.css("top",($(href+"-moved").offset().top-10)+"px"));
 				}
+				if(showdebug) console.log("added click behavior and scroll anchor for "+href);
 			}
 		}
 	});
