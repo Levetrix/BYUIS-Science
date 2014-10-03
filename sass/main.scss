@@ -28,6 +28,7 @@ $white: #f9f9f9;
 $blue: #66B9E3;
 $teal: rgb(0,128,128);
 $charcoal: #323232;
+$charcoal1: #363636;
 
 $quarter: 13.8125rem;
 $med-gutter: 2.01rem;
@@ -106,7 +107,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size:1.85rem;
+	font-size:2rem;
 }
 
 h2 {
@@ -141,8 +142,8 @@ h3 {
 	
 }
 
-.one h1 {
-	
+.four h1 {
+	margin-bottom:#{$med-gutter / 2};
 }
 
 .arrow {
@@ -258,12 +259,13 @@ h3 {
 		/*	Styling for contents of the tile (hidden initially)	*/
 		& h2 {
 			font-size: 1.55rem;
+			color:#fff;
 		}
 		& p {
 			text-align: left;
 			margin: 1rem;
 			text-decoration:none;
-			color: $black;
+			color:#fff;
 			max-height: calc( 100% - 1.55rem - #{$med-gutter} - 1rem );
 			overflow:hidden;
 			z-index:1;
@@ -286,18 +288,15 @@ h3 {
 			left: calc( 50% - #{ $med-gutter * 2 } );
 			margin-left:auto;
 			margin-right:auto;
-			z-index: 4;
-			
+			z-index: 4;			
 			height: 2rem;
-			width:	#{ $med-gutter * 4 };
-			padding: 0.15rem;
-			
+			width:	#{ $med-gutter * 4 };					
 			content: "More Info";
+			color:#fff;
 			background-color:$blue;
-			
-		  @include background-image(linear-gradient(to bottom right, $blue, $teal));
+		  //@include background-image(linear-gradient(to bottom right, $blue, $teal));
 		  /*@include border-radius(1rem);*/
-		  border: 3px solid white;
+		  //border: 3px solid white;
 			
 			opacity: 0;
 			@include transition-property(opacity);
@@ -336,78 +335,55 @@ h3 {
 				bottom:calc( 1.5 * #{$quarter} - 55px);
 			}
 		}
+		
+		&:nth-child(n) {
+			color:#fff;
+			background-color: $charcoal1;
+			& p:after {
+				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $charcoal1 inset);
+			}
+		}		
 		/*	First 4 tiles styles!	*/
 		&:nth-child(1) {
-			background-color: $teal;
-			& p:after {
-				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $teal inset);
-			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder1.jpg);
 			}
 		}
 		&:nth-child(2) {
-			background-color:$yellow;
-			& p:after {
-				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $yellow inset);
-			}
+		
 			&:after {
 				background-image: url(../img/placeholders/placeholder2.jpg);
 			}
 		}
 		&:nth-child(3) {
-			background-color:$grey;
-			& p:after {
-				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $grey inset);
-			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder3.jpg);
 			}
 		}
 		&:nth-child(4) {
-			background-color:$red;
-			& p:after {
-				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
-			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder4.jpg);
 			}
 		}
 		&:nth-child(5) {
-			background-color:$red;
-			& p:after {
-				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
-			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder5.jpg);
 				
 			}
 		}
 		&:nth-child(6) {
-			background-color:$red;
-			& p:after {
-				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
-			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder6.jpg);
 				
 			}
 		}
 		&:nth-child(7) {
-			background-color:$red;
-			& p:after {
-				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
-			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder7.jpg);
 				
 			}
 		}
 		&:nth-child(8) {
-			background-color:$red;
-			& p:after {
-				@include box-shadow($default-box-shadow-h-offset $default-box-shadow-v-offset $default-box-shadow-blur $default-box-shadow-spread $red inset);
-			}
 			&:after {
 				background-image: url(../img/placeholders/placeholder8.jpg);
 				
@@ -424,7 +400,7 @@ h3 {
 			width:100%;
 			height:55px;
 			background-color:rgba($charcoal, .55);
-			z-index: 3;   
+			z-index: 3;
 			@include transition-property(bottom);
 			@include transition-timing-function(ease);
 			@include transition-duration(0.750s);
