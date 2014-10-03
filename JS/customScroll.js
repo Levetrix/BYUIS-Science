@@ -12,7 +12,7 @@ var showdebug=true,
 },
 	clickTileHandler = function() {
 		if(showdebug) console.log("clicked a tile!");
-		$(this).find("> a").get(0).click();
+		$(this).find("> a").get(1).click();
 },
 	clickHashLink = function( e ) {
 		var $this = $(this),
@@ -26,6 +26,7 @@ var showdebug=true,
 		if(showdebug) console.log("clicked an anchor!");
 		//	Remove all clicked tile states
 		$(".clicked").removeClass("clicked");
+		$(".not-loaded").removeClass("initialized");
 		//	Add the clicked state to the one we're moving to
 		if(!opened)
 			$that.addClass("clicked");
