@@ -28,7 +28,7 @@ $white: #f9f9f9;
 $blue: #66B9E3;
 $teal: rgb(0,128,128);
 $charcoal: #323232;
-$charcoal1: #363636;
+$charcoal1: #383838;
 
 $quarter: 13.8125rem;
 $med-gutter: 2.01rem;
@@ -84,6 +84,8 @@ div, figure, ul, li {
 
 a {
 	color:$blue;
+	font-family: $OpenSansLt;
+	font-size: 1.1rem;
 }
 
 .section {
@@ -229,6 +231,10 @@ h3 {
 
 .three h2 {
 	color:#fff;
+	
+	& a {
+		font-size:1.55rem;
+	}
 }
 
 .three h2:first-child {
@@ -286,30 +292,41 @@ h3 {
 			position: absolute;
 			bottom: $med-gutter;
 			left: calc( 50% - #{ $med-gutter * 2 } );
-			margin-left:auto;
-			margin-right:auto;
 			z-index: 4;			
-			height: 2rem;
-			width:	#{ $med-gutter * 4 };					
-			content: "More Info";
-			color:#fff;
-			background-color:$blue;
+			height: 2rem;				
+			//content: "More Info";
+			background-color:transparent;
 			border:none;
+			border:1px solid $blue;
 		  //@include background-image(linear-gradient(to bottom right, $blue, $teal));
 		  /*@include border-radius(1rem);*/
 		  //border: 3px solid white;
+		  
+		  
+			padding-top:1px;
+			color:#fff;
+			margin: #{$med-gutter / 2} auto;
+			box-sizing:border-box;
+			min-height:32px;
+			width:#{$quarter / 2};
 			
 			opacity: 0;
 			@include transition-property(opacity);
 			@include transition-timing-function(ease);
 			@include transition-duration(0.750s);
+			
+			&:hover {
+				border:1px solid #fff;
+			
+				& a {
+					color:#fff;
+				}
+			}
 		}
 		/*	Background images (shown initially, hidden with click)	*/
-			
-			&.submitButton {
-				padding-top:7px;
-				color:#fff;
-				font-family:"OpenSanslt";
+			&:hover {
+					background:transparent;
+				
 			}
 		&:after {
 			content: "";
@@ -555,7 +572,7 @@ textarea {
 		/*	Handle the focus with :target ... or not	*/
 		& > li.clicked:target, & > li.clicked {
 			width:#{$quarter * 2 + $med-gutter * 1};
-			height:#{($quarter * 1.5) * 2 + $med-gutter};
+			height:calc(#{($quarter * 1.5) * 2 + $med-gutter} + 5px);
 			left:auto;
 			z-index: 3;
 			
@@ -723,12 +740,12 @@ textarea {
 		/*	Handle the focus with :target ... or not	*/
 		& > li.clicked:target, & > li.clicked {
 			width:calc(#{$quarter * 3 + $med-gutter * 2} + 1px);
-			height:#{($quarter * 1.5) * 2 + $med-gutter};
+			height:calc(#{($quarter * 1.5) * 2 + $med-gutter} + 5px);
 			left:0;
 		}
 		& > li.clicked:nth-child(3n):target, & > li:nth-child(3n).clicked {
 			width:calc(#{$quarter * 3 + $med-gutter * 2} + 1px);
-			height:#{($quarter * 1.5) * 2 + $med-gutter};
+			height:calc(#{($quarter * 1.5) * 2 + $med-gutter} + 5px);
 			left:initial;
 			right:0;	
 		}
