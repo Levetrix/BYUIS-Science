@@ -2,17 +2,18 @@
 	"Featured Products": [
 		{
 			"pattern": "PHSCS-127",
-			"marketing-text": "In this ADEIL Award-Winning Descriptive Astronomy course, university students will explore the content and history of the cosmos; the nature of the universe; and learn how physics apply to astronomy."
+			"marketing-text": "In this Award-Winning astronomy course, university students will explore the content and history of the cosmos, the nature of the universe, and learn how physics apply to astronomy. "
 			"img": "../img/Astronomy.jpg"
 		},
 		{
 			"pattern": "EARTH-041",
-			"marketing-text": "Explore micro-views of earth systems in this high school science course, including . . . [See course description]."
+			"marketing-text": "Discover the science behind recent natural disasters such as hurricanes, earthquakes, and tsunamis. Students in this high school course will also learn about the structure of our atmosphere and how it makes life on earth possible. "
 			"img": "../img/EARTH1.jpg"
 		},
 		{
 			"pattern": "EARTH-043",
-			"marketing-text": "Explore macro-views of earth systems in this high school science course, including the science behind recent natural disasters: hurricanes, earthquakes, and tsunamis. Students will also learn about the structure of our atmosphere and how it makes life possible."
+			"marketing-text": "Unearth the processes both man and nature have developed in our universe, including solar, energy, atmospheric, and biological systems."
+			"img": "../img/EARTH2.jpg"
 		},
 		{
 			"pattern": "EXSC-221",
