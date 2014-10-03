@@ -12,28 +12,44 @@ var showdebug=true,
 },
 	clickTileHandler = function() {
 		if(showdebug) console.log("clicked a tile!");
-		if(!$(this).hasClass("clicked"))
-			$(this).find("> a").get(0).click();
-		else
-			$(this).removeClass("clicked");
+		$(this).find("> a").get(0).click();
 },
 	clickHashLink = function( e ) {
 		var $this = $(this),
 			targetId =  $this.attr("data-href") || $this.attr("href"),
-			$that = ($(targetId+"-moved").length>0)?$(targetId+"-moved"):$(targetId)
+			$that = ($(targetId+"-moved").length>0)?$(targetId+"-moved"):$(targetId),
+			opened = $that.hasClass("clicked")
 		;
 		//	cancel bubble to avoid artificial double-click
 		e.stopPropagation();
-		
+
 		if(showdebug) console.log("clicked an anchor!");
 		//	Remove all clicked tile states
 		$(".clicked").removeClass("clicked");
 		//	Add the clicked state to the one we're moving to
-		$that.addClass("clicked");
+		if(!opened)
+			$that.addClass("clicked");
 		//	Set the window hash to trigger style :target (no longer using the :target style trick for javascript-enabled users)
 		//window.location = targetId;
 		//	Scroll to the desired position
 		smoothScroll.animateScroll(this, targetId, ssOptions);
+},
+	makeTileFillWindow = function( e ) {
+		var $this = $(this),
+			targetId =  $this.attr("data-href") || $this.attr("href"),
+			$that = ($(targetId+"-moved").length>0)?$(targetId+"-moved"):$(targetId)
+		;
+		$("#featured-courses li").each(function() {
+			$(this).removeAttr("style");
+		});
+		//	Only make it full height if the smallest breakpoint is active
+		if(575 > $(window).width() && !$this.hasClass("clicked")) {
+			if(showdebug) console.log("resizing height of tile! "+$this.attr("id"));
+			if(showdebug) console.log("height of tile: "+$this.height());
+			if(showdebug) console.log("height of window: "+$(window).height());
+			$this.css("height",$(window).height() + "px");
+			if(showdebug) console.log("height of tile: "+$this.height());
+		}
 };
 
 smoothScroll.init(ssOptions);
@@ -52,6 +68,7 @@ $(window).resize(function() {
 	if(!$("#featured-courses li").hasClass("cursor-pointer")) $("#featured-courses li").addClass("cursor-pointer");
 	
 	//	Attach the click handler to the tiles
+	$("#featured-courses li").on("click.tileScroll",makeTileFillWindow);
 	$("#featured-courses li").on("click.tileScroll",clickTileHandler);
 	
 	//	Remove the scroll anchors, because they will be added in the loop below according to breakpoint logic
@@ -78,11 +95,11 @@ $(window).resize(function() {
 				$this.parent().attr("id",(href+"-moved").substr(1));
 				//	Only change the scroll height behavior different for the smallest breakpoint
 				var newScrollAnchor = $('<div class="hidden-scroll-anchor">&nbsp;</div>').attr("id",href.substr(1));
-				if(575 < $(window).width()) {
+				if(575 <= $(window).width()) {
 					//	Insert an invisible element with the id this points to at the desired scroll position
 					$("body").prepend(newScrollAnchor.css("top",fcYOffset));
 				} else {
-					$("body").prepend(newScrollAnchor.css("top",($(href+"-moved").offset().top-10)+"px"));
+					$("body").prepend(newScrollAnchor.css("top",($(href+"-moved").offset().top)+"px"));
 				}
 				if(showdebug) console.log("added click behavior and scroll anchor for "+href);
 			}
