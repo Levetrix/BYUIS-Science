@@ -4073,7 +4073,7 @@ h3 {
   left: 0;
 }
 /* line 283, ../sass/main.scss */
-.tile-featured-products li:before {
+.tile-featured-products li button {
   position: absolute;
   bottom: 2.01rem;
   left: calc(50% - 4.02rem );
@@ -4082,7 +4082,7 @@ h3 {
   z-index: 4;
   height: 2rem;
   width: 8.04rem;
-  padding: 0.2rem;
+  padding: 0.15rem;
   content: "More Info";
   background-color: #66b9e3;
   background-image: -webkit-gradient(linear, to bottom right, to top left, color-stop(0%, #66b9e3), color-stop(100%, #008080));
@@ -4090,11 +4090,8 @@ h3 {
   background-image: -moz-linear-gradient(to bottom right, #66b9e3, #008080);
   background-image: -o-linear-gradient(to bottom right, #66b9e3, #008080);
   background-image: linear-gradient(to bottom right, #66b9e3, #008080);
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-  border-radius: 1rem;
+  /*@include border-radius(1rem);*/
+  border: 3px solid white;
   opacity: 0;
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
@@ -4109,7 +4106,7 @@ h3 {
   -o-transition-duration: 0.75s;
   transition-duration: 0.75s;
 }
-/* line 307, ../sass/main.scss */
+/* line 308, ../sass/main.scss */
 .tile-featured-products li:after {
   content: "";
   opacity: 1;
@@ -4133,142 +4130,142 @@ h3 {
   -o-transition-duration: 0.75s;
   transition-duration: 0.75s;
 }
-/* line 323, ../sass/main.scss */
+/* line 324, ../sass/main.scss */
 .tile-featured-products li.clicked:target, .tile-featured-products li.clicked {
   width: calc(100% + 4.02rem);
   left: -3.015rem;
 }
-/* line 326, ../sass/main.scss */
+/* line 327, ../sass/main.scss */
 .tile-featured-products li.clicked:target:after, .tile-featured-products li.clicked:after {
   opacity: 0;
   z-index: 0;
 }
-/* line 330, ../sass/main.scss */
-.tile-featured-products li.clicked:target:before, .tile-featured-products li.clicked:before {
+/* line 331, ../sass/main.scss */
+.tile-featured-products li.clicked:target button, .tile-featured-products li.clicked button {
   opacity: 1;
   z-index: 4;
 }
-/* line 334, ../sass/main.scss */
+/* line 335, ../sass/main.scss */
 .tile-featured-products li.clicked:target .shader, .tile-featured-products li.clicked .shader {
   bottom: calc(1.5 * 13.8125rem - 55px);
 }
-/* line 339, ../sass/main.scss */
+/* line 340, ../sass/main.scss */
 .tile-featured-products li:nth-child(1) {
   background-color: teal;
 }
-/* line 341, ../sass/main.scss */
+/* line 342, ../sass/main.scss */
 .tile-featured-products li:nth-child(1) p:after {
   -webkit-box-shadow: 0px -45px 15px 0px teal inset;
   -moz-box-shadow: 0px -45px 15px 0px teal inset;
   box-shadow: 0px -45px 15px 0px teal inset;
 }
-/* line 344, ../sass/main.scss */
+/* line 345, ../sass/main.scss */
 .tile-featured-products li:nth-child(1):after {
   background-image: url(../img/placeholders/placeholder1.jpg);
 }
-/* line 348, ../sass/main.scss */
+/* line 349, ../sass/main.scss */
 .tile-featured-products li:nth-child(2) {
   background-color: #dfb655;
 }
-/* line 350, ../sass/main.scss */
+/* line 351, ../sass/main.scss */
 .tile-featured-products li:nth-child(2) p:after {
   -webkit-box-shadow: 0px -45px 15px 0px #dfb655 inset;
   -moz-box-shadow: 0px -45px 15px 0px #dfb655 inset;
   box-shadow: 0px -45px 15px 0px #dfb655 inset;
 }
-/* line 353, ../sass/main.scss */
+/* line 354, ../sass/main.scss */
 .tile-featured-products li:nth-child(2):after {
   background-image: url(../img/placeholders/placeholder2.jpg);
 }
-/* line 357, ../sass/main.scss */
+/* line 358, ../sass/main.scss */
 .tile-featured-products li:nth-child(3) {
   background-color: lightgrey;
 }
-/* line 359, ../sass/main.scss */
+/* line 360, ../sass/main.scss */
 .tile-featured-products li:nth-child(3) p:after {
   -webkit-box-shadow: 0px -45px 15px 0px lightgrey inset;
   -moz-box-shadow: 0px -45px 15px 0px lightgrey inset;
   box-shadow: 0px -45px 15px 0px lightgrey inset;
 }
-/* line 362, ../sass/main.scss */
+/* line 363, ../sass/main.scss */
 .tile-featured-products li:nth-child(3):after {
   background-image: url(../img/placeholders/placeholder3.jpg);
 }
-/* line 366, ../sass/main.scss */
+/* line 367, ../sass/main.scss */
 .tile-featured-products li:nth-child(4) {
   background-color: #872633;
 }
-/* line 368, ../sass/main.scss */
+/* line 369, ../sass/main.scss */
 .tile-featured-products li:nth-child(4) p:after {
   -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
   -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
   box-shadow: 0px -45px 15px 0px #872633 inset;
 }
-/* line 371, ../sass/main.scss */
+/* line 372, ../sass/main.scss */
 .tile-featured-products li:nth-child(4):after {
   background-image: url(../img/placeholders/placeholder4.jpg);
 }
-/* line 375, ../sass/main.scss */
+/* line 376, ../sass/main.scss */
 .tile-featured-products li:nth-child(5) {
   background-color: #872633;
 }
-/* line 377, ../sass/main.scss */
+/* line 378, ../sass/main.scss */
 .tile-featured-products li:nth-child(5) p:after {
   -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
   -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
   box-shadow: 0px -45px 15px 0px #872633 inset;
 }
-/* line 380, ../sass/main.scss */
+/* line 381, ../sass/main.scss */
 .tile-featured-products li:nth-child(5):after {
   background-image: url(../img/placeholders/placeholder5.jpg);
 }
-/* line 385, ../sass/main.scss */
+/* line 386, ../sass/main.scss */
 .tile-featured-products li:nth-child(6) {
   background-color: #872633;
 }
-/* line 387, ../sass/main.scss */
+/* line 388, ../sass/main.scss */
 .tile-featured-products li:nth-child(6) p:after {
   -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
   -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
   box-shadow: 0px -45px 15px 0px #872633 inset;
 }
-/* line 390, ../sass/main.scss */
+/* line 391, ../sass/main.scss */
 .tile-featured-products li:nth-child(6):after {
   background-image: url(../img/placeholders/placeholder6.jpg);
 }
-/* line 395, ../sass/main.scss */
+/* line 396, ../sass/main.scss */
 .tile-featured-products li:nth-child(7) {
   background-color: #872633;
 }
-/* line 397, ../sass/main.scss */
+/* line 398, ../sass/main.scss */
 .tile-featured-products li:nth-child(7) p:after {
   -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
   -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
   box-shadow: 0px -45px 15px 0px #872633 inset;
 }
-/* line 400, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 .tile-featured-products li:nth-child(7):after {
   background-image: url(../img/placeholders/placeholder7.jpg);
 }
-/* line 405, ../sass/main.scss */
+/* line 406, ../sass/main.scss */
 .tile-featured-products li:nth-child(8) {
   background-color: #872633;
 }
-/* line 407, ../sass/main.scss */
+/* line 408, ../sass/main.scss */
 .tile-featured-products li:nth-child(8) p:after {
   -webkit-box-shadow: 0px -45px 15px 0px #872633 inset;
   -moz-box-shadow: 0px -45px 15px 0px #872633 inset;
   box-shadow: 0px -45px 15px 0px #872633 inset;
 }
-/* line 410, ../sass/main.scss */
+/* line 411, ../sass/main.scss */
 .tile-featured-products li:nth-child(8):after {
   background-image: url(../img/placeholders/placeholder8.jpg);
 }
-/* line 416, ../sass/main.scss */
+/* line 417, ../sass/main.scss */
 .tile-featured-products li:nth-child(n+5) {
   display: none;
 }
-/* line 420, ../sass/main.scss */
+/* line 421, ../sass/main.scss */
 .tile-featured-products li .shader {
   position: absolute;
   bottom: 0;
@@ -4289,14 +4286,14 @@ h3 {
   -o-transition-duration: 0.75s;
   transition-duration: 0.75s;
 }
-/* line 431, ../sass/main.scss */
+/* line 432, ../sass/main.scss */
 .tile-featured-products li .shader h3 {
   color: #fff;
   padding-top: 0.769rem;
   line-height: 1em;
 }
 
-/* line 440, ../sass/main.scss */
+/* line 441, ../sass/main.scss */
 .hidden-scroll-anchor {
   height: 0;
   position: absolute;
@@ -4306,25 +4303,25 @@ h3 {
 /* ------------------------ */
 /* ------Contact Form------ */
 /* ------------------------ */
-/* line 451, ../sass/main.scss */
+/* line 452, ../sass/main.scss */
 .contact {
   text-align: center;
   padding: 16px;
   background-color: #323232;
 }
 
-/* line 457, ../sass/main.scss */
+/* line 458, ../sass/main.scss */
 .contactTitle {
   display: inline-block;
 }
 
-/* line 461, ../sass/main.scss */
+/* line 462, ../sass/main.scss */
 .contactTitle h2 {
   font-size: 1.5em;
   color: #fff;
 }
 
-/* line 466, ../sass/main.scss */
+/* line 467, ../sass/main.scss */
 .contactQuarter {
   display: inline-block;
   width: 13.8125rem;
@@ -4333,12 +4330,12 @@ h3 {
   margin-bottom: 0;
 }
 
-/* line 474, ../sass/main.scss */
+/* line 475, ../sass/main.scss */
 .contactQuarter h4 {
   color: #fff;
 }
 
-/* line 478, ../sass/main.scss */
+/* line 479, ../sass/main.scss */
 input {
   font-family: "OpenSansLt";
   font-size: .95em;
@@ -4368,13 +4365,13 @@ input::-webkit-input-placeholder {
   color: #ddd;
 }
 
-/* line 490, ../sass/main.scss */
+/* line 491, ../sass/main.scss */
 .contactAreaQuarter {
   width: 100%;
   height: 32px;
 }
 
-/* line 495, ../sass/main.scss */
+/* line 496, ../sass/main.scss */
 .contactHalf {
   display: inline-block;
   width: 13.8125rem;
@@ -4383,18 +4380,18 @@ input::-webkit-input-placeholder {
   margin-bottom: 0;
 }
 
-/* line 503, ../sass/main.scss */
+/* line 504, ../sass/main.scss */
 .contactHalf h4 {
   color: #fff;
 }
 
-/* line 507, ../sass/main.scss */
+/* line 508, ../sass/main.scss */
 .contactAreaHalf {
   width: 100%;
   height: 32px;
 }
 
-/* line 512, ../sass/main.scss */
+/* line 513, ../sass/main.scss */
 textarea {
   font-family: "OpenSansLt";
   font-size: .95em;
@@ -4425,7 +4422,7 @@ textarea::-webkit-input-placeholder {
   color: #ddd;
 }
 
-/* line 525, ../sass/main.scss */
+/* line 526, ../sass/main.scss */
 .submitButton {
   padding-top: 7px;
   color: #fff;
@@ -4436,19 +4433,19 @@ textarea::-webkit-input-placeholder {
   width: 6.90625rem;
 }
 
-/* line 535, ../sass/main.scss */
+/* line 536, ../sass/main.scss */
 .submitButton:hover {
   cursor: pointer;
   background-color: rgba(102, 185, 227, 0.9);
 }
 
-/* line 540, ../sass/main.scss */
+/* line 541, ../sass/main.scss */
 .form-success {
   color: #fff;
 }
 
 @media all and (min-width: 575px) {
-  /* line 547, ../sass/main.scss */
+  /* line 548, ../sass/main.scss */
   ul.tile-featured-products {
     position: relative;
     display: block;
@@ -4460,7 +4457,7 @@ textarea::-webkit-input-placeholder {
     /*	Handle the focus with :target ... or not	*/
     /*	First 4 tiles styles!	*/
   }
-  /* line 557, ../sass/main.scss */
+  /* line 558, ../sass/main.scss */
   ul.tile-featured-products > li {
     display: block;
     width: calc(50% - $med-gutter );
@@ -4475,7 +4472,7 @@ textarea::-webkit-input-placeholder {
     	display:none;
     }*/
   }
-  /* line 572, ../sass/main.scss */
+  /* line 573, ../sass/main.scss */
   ul.tile-featured-products > li.clicked:target, ul.tile-featured-products > li.clicked {
     width: 29.635rem;
     height: 43.4475rem;
@@ -4485,75 +4482,75 @@ textarea::-webkit-input-placeholder {
     	display:block;
     }*/
   }
-  /* line 581, ../sass/main.scss */
+  /* line 582, ../sass/main.scss */
   ul.tile-featured-products > li.clicked:target .shader, ul.tile-featured-products > li.clicked .shader {
     bottom: calc(43.4475rem - 55px);
   }
-  /* line 586, ../sass/main.scss */
+  /* line 587, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(1) {
     top: 0;
     left: 0;
   }
-  /* line 590, ../sass/main.scss */
+  /* line 591, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(2) {
     top: 0;
     right: 0;
   }
-  /* line 594, ../sass/main.scss */
+  /* line 595, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(3) {
     bottom: 0;
     left: 0;
   }
-  /* line 598, ../sass/main.scss */
+  /* line 599, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(4) {
     bottom: 0;
     right: 0;
   }
 }
-/* line 605, ../sass/main.scss */
+/* line 606, ../sass/main.scss */
 .f4 {
   display: none;
 }
 
 @media (min-width: 575px) {
-  /* line 614, ../sass/main.scss */
+  /* line 615, ../sass/main.scss */
   .two li:nth-child(-n + 8) {
     display: block;
   }
-  /* line 618, ../sass/main.scss */
+  /* line 619, ../sass/main.scss */
   .two li:nth-child(2) {
     border-top: #66b9e3 1px solid;
   }
 
-  /* line 623, ../sass/main.scss */
+  /* line 624, ../sass/main.scss */
   #contactForm {
     max-width: 32.65rem;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* line 629, ../sass/main.scss */
+  /* line 630, ../sass/main.scss */
   .contactHalf {
     width: 29.635rem;
     height: 104px;
   }
 
-  /* line 634, ../sass/main.scss */
+  /* line 635, ../sass/main.scss */
   .contactAreaHalf {
     height: 80px;
   }
 
-  /* line 638, ../sass/main.scss */
+  /* line 639, ../sass/main.scss */
   .enrollButton {
     margin-left: auto;
   }
 }
 @media (min-width: 575px) and (max-width: 850px) {
-  /* line 644, ../sass/main.scss */
+  /* line 645, ../sass/main.scss */
   .two ul {
     width: calc(2 * 13.8125rem + 2.01rem);
   }
-  /* line 647, ../sass/main.scss */
+  /* line 648, ../sass/main.scss */
   .two ul li {
     -webkit-box-flex: 1 calc(50% - 2.01rem);
     -moz-box-flex: 1 calc(50% - 2.01rem);
@@ -4562,18 +4559,18 @@ textarea::-webkit-input-placeholder {
     flex: 1 calc(50% - 2.01rem);
   }
 
-  /* line 653, ../sass/main.scss */
+  /* line 654, ../sass/main.scss */
   .featured.f4 {
     display: inline-block;
   }
 }
 @media (min-width: 850px) and (max-width: 1107px) {
-  /* line 661, ../sass/main.scss */
+  /* line 662, ../sass/main.scss */
   .two ul {
     width: calc(3 * 13.8125rem + 2.01rem * 2);
   }
 
-  /* line 665, ../sass/main.scss */
+  /* line 666, ../sass/main.scss */
   .two {
     /*& li:nth-child {
     	padding-top:$med-gutter;
@@ -4581,7 +4578,7 @@ textarea::-webkit-input-placeholder {
     	top:-1px; 
     }*/
   }
-  /* line 666, ../sass/main.scss */
+  /* line 667, ../sass/main.scss */
   .two ul li {
     -webkit-box-flex: 1 calc(33% - 2.01rem);
     -moz-box-flex: 1 calc(33% - 2.01rem);
@@ -4589,69 +4586,69 @@ textarea::-webkit-input-placeholder {
     -ms-flex: 1 calc(33% - 2.01rem);
     flex: 1 calc(33% - 2.01rem);
   }
-  /* line 669, ../sass/main.scss */
+  /* line 670, ../sass/main.scss */
   .two ul li:nth-child(3) {
     border-top: solid #66b9e3 1px;
   }
-  /* line 677, ../sass/main.scss */
+  /* line 678, ../sass/main.scss */
   .two li:nth-child(n) {
     display: block;
   }
 
-  /* line 689, ../sass/main.scss */
+  /* line 690, ../sass/main.scss */
   .featured.f4 {
     display: none;
   }
 }
 @media (min-width: 1107px) {
-  /* line 697, ../sass/main.scss */
+  /* line 698, ../sass/main.scss */
   ul.tile-featured-products {
     width: calc(( 13.8125rem + 2.01rem ) * 3 );
     /*	Handle the focus with :target ... or not	*/
   }
-  /* line 700, ../sass/main.scss */
+  /* line 701, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(-n + 7) {
     display: inline-block;
   }
-  /* line 703, ../sass/main.scss */
+  /* line 704, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(n) {
     position: absolute;
   }
-  /* line 706, ../sass/main.scss */
+  /* line 707, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(3n - 2) {
     left: 0;
   }
-  /* line 709, ../sass/main.scss */
+  /* line 710, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(3n - 1) {
     left: calc(13.8125rem + 1 * 2.01rem);
   }
-  /* line 712, ../sass/main.scss */
+  /* line 713, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(3n) {
     right: 0;
     left: initial;
   }
-  /* line 716, ../sass/main.scss */
+  /* line 717, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(-n + 3) {
     top: 0;
   }
-  /* line 719, ../sass/main.scss */
+  /* line 720, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(n + 4) {
     bottom: 0;
   }
-  /* line 722, ../sass/main.scss */
+  /* line 723, ../sass/main.scss */
   ul.tile-featured-products > li {
     -webkit-transition-duration: 0.75s;
     -moz-transition-duration: 0.75s;
     -o-transition-duration: 0.75s;
     transition-duration: 0.75s;
   }
-  /* line 726, ../sass/main.scss */
+  /* line 727, ../sass/main.scss */
   ul.tile-featured-products > li.clicked:target, ul.tile-featured-products > li.clicked {
     width: calc(45.4575rem + 1px);
     height: 43.4475rem;
     left: 0;
   }
-  /* line 731, ../sass/main.scss */
+  /* line 732, ../sass/main.scss */
   ul.tile-featured-products > li.clicked:nth-child(3n):target, ul.tile-featured-products > li:nth-child(3n).clicked {
     width: calc(45.4575rem + 1px);
     height: 43.4475rem;
@@ -4659,11 +4656,11 @@ textarea::-webkit-input-placeholder {
     right: 0;
   }
 
-  /* line 739, ../sass/main.scss */
+  /* line 740, ../sass/main.scss */
   .two ul {
     width: calc(4 * 13.8125rem + 2.01rem * 3);
   }
-  /* line 742, ../sass/main.scss */
+  /* line 743, ../sass/main.scss */
   .two ul li {
     -webkit-box-flex: 1 calc(25% - 2.01rem);
     -moz-box-flex: 1 calc(25% - 2.01rem);
@@ -4671,11 +4668,11 @@ textarea::-webkit-input-placeholder {
     -ms-flex: 1 calc(25% - 2.01rem);
     flex: 1 calc(25% - 2.01rem);
   }
-  /* line 745, ../sass/main.scss */
+  /* line 746, ../sass/main.scss */
   .two ul li:nth-child(-n + 4) {
     border-top: solid #66b9e3 1px;
   }
-  /* line 749, ../sass/main.scss */
+  /* line 750, ../sass/main.scss */
   .two ul li:nth-child(9) {
     display: none;
   }

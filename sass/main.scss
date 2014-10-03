@@ -280,7 +280,7 @@ h3 {
 		}
 		
 		/*	"more info" buttons	*/
-		&:before {
+		& button {
 			position: absolute;
 			bottom: $med-gutter;
 			left: calc( 50% - #{ $med-gutter * 2 } );
@@ -290,13 +290,14 @@ h3 {
 			
 			height: 2rem;
 			width:	#{ $med-gutter * 4 };
-			padding: 0.2rem;
+			padding: 0.15rem;
 			
 			content: "More Info";
 			background-color:$blue;
 			
 		  @include background-image(linear-gradient(to bottom right, $blue, $teal));
-		  @include border-radius(1rem);
+		  /*@include border-radius(1rem);*/
+		  border: 3px solid white;
 			
 			opacity: 0;
 			@include transition-property(opacity);
@@ -327,7 +328,7 @@ h3 {
 				opacity:0;
 				z-index:0;
 			}
-			&:before {
+			& button {
 				opacity:1;
 				z-index:4;
 			}

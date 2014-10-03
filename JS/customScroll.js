@@ -40,7 +40,7 @@ smoothScroll.init(ssOptions);
 //	Change the anchors with javascript for users that have it available.
 $(window).resize(function() {
 	var fcYOffset = $("#featured-courses").parent().find("h2").offset().top+"px";
-	$("#featured-courses li").off(".tileScroll");
+	$("#featured-courses li,a").off(".tileScroll");
 	if(showdebug) console.log("window resized!");
 	if(showdebug) console.log($("#featured-courses").parent().height()+" <= "+$(window).height());
 	if(showdebug) console.log($("#featured-courses").parent().height() <= $(window).height());
