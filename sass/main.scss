@@ -294,6 +294,7 @@ h3 {
 			content: "More Info";
 			color:#fff;
 			background-color:$blue;
+			border:none;
 		  //@include background-image(linear-gradient(to bottom right, $blue, $teal));
 		  /*@include border-radius(1rem);*/
 		  //border: 3px solid white;
@@ -304,6 +305,12 @@ h3 {
 			@include transition-duration(0.750s);
 		}
 		/*	Background images (shown initially, hidden with click)	*/
+			
+			&.submitButton {
+				padding-top:7px;
+				color:#fff;
+				font-family:"OpenSanslt";
+			}
 		&:after {
 			content: "";
 			opacity: 1;
@@ -616,6 +623,15 @@ textarea {
 		margin-left:auto;
 		//margin-left:calc(50% - #{$quarter * 2 + $med-gutter} / 2);
 	}
+	
+	.four > h1 {
+		margin-bottom:#{$med-gutter};
+	}
+	
+	li a p {
+		display:inline-block;
+		padding:#{$med-gutter};
+	}
 }
 @media (min-width:575px) and (max-width:850px) {
 	.two ul {
@@ -698,6 +714,11 @@ textarea {
 		}
 		& > li {
 			@include transition-duration(0.750s);
+			
+			& a p {
+				
+				padding:#{$med-gutter * 2};
+			}
 		}
 		/*	Handle the focus with :target ... or not	*/
 		& > li.clicked:target, & > li.clicked {
