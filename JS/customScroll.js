@@ -1,4 +1,4 @@
-var showdebug=true,
+var showdebug=false,
 	ssOptions = {
 		speed: 250,
 		easing: 'linear',
@@ -84,7 +84,7 @@ $(window).resize(function() {
 			if(showdebug) console.log($this);
 		} else if(href) {
 			//	Also only if the "href" begins with a hash (meaning it is an in-page link)
-			if(href.substring(0,1) == "#") {
+			if(href.substring(0,1) == "#" && href != "#featured-courses") {
 				//	Move the data into a data attribute (removes the typical scroll behavior)
 				$this.attr("data-href",href);
 				$this.removeAttr("href");
@@ -106,6 +106,22 @@ $(window).resize(function() {
 			}
 		}
 	});
+	//	Add in the data-course-background...
+	$("#featured-courses li").each(function() {
+		var $this = $(this);
+		if($this.attr("data-course-background")){
+			if(showdebug) console.log("setting background image to: " + $this.attr("data-course-background"));
+			$this.css("background-image","url('"+$this.attr("data-course-background")+"')");
+		}
+		if($this.attr("data-course-code")){
+			var newId = $this.attr("data-course-code")+(($this.attr("id").indexOf("-moved")>-1)?"-moved":"");
+			if(showdebug) console.log("setting tile id to: " + newId);
+			$this.attr("id", newId);
+		}
+	});
+	
+	//	The not-loaded class is removed to indicate success
+	$(".not-loaded").removeClass("not-loaded").addClass("initialized");
 });
 $(window).resize();
 	
