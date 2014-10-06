@@ -365,6 +365,7 @@ h3 {
 			position: absolute;
 			z-index: 1;   
 			background-size:cover;
+			background-image: attr(data-course-background url) !important;
 			
 			@include transition-property(opacity z-index);
 			@include transition-timing-function(ease);
@@ -670,7 +671,7 @@ textarea {
 	
 	.enrollButton {
 		margin-left:auto;
-		//margin-left:calc(50% - #{$quarter * 2 + $med-gutter} / 2);
+		/*margin-left:calc(50% - #{$quarter * 2 + $med-gutter} / 2);*/
 	}
 	
 	.four > h1 {
