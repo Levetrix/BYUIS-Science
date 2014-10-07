@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>Foundation off-canvas menu test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link id="fonts" rel="stylesheet" href="stylesheets/normalize.css" type="text/css" />
+		<link id="fonts" rel="stylesheet" href="stylesheets/foundation.css" type="text/css" />
+		<link id="fonts" rel="stylesheet" href="stylesheets/offcanvasmenu.css" type="text/css" />
+		
+		<script src="js/vendor/jquery-2.1.1.js"></script>
+		
+		<script src="js/foundation/foundation.js"></script>
+	  <script src="js/foundation/foundation.offcanvas.js"></script>
+	  <!-- Other JS plugins can be included here -->
+	
+	  <script>
+	    $(document).foundation();
+	  </script>
+		
+	</head>
+	<body>
+		<div class="off-canvas-wrap">
+		  <div class="inner-wrap">
+		    <nav class="tab-bar">
+		      <section class="left-small">
+		        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+		      </section>
+		
+		      <section class="middle tab-bar-section">
+		        <h1 class="title">Foundation</h1>
+		      </section>
+		
+		      <section class="right-small">
+		        <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+		      </section>
+		    </nav>
+		
+		    <aside class="left-off-canvas-menu">
+		      <ul class="off-canvas-list">
+		        <li><label>Foundation</label></li>
+		        <li class="has-submenu"><a href="#">The Psychohistorians</a>
+		            <ul class="left-submenu">
+		                <li class="back"><a href="#">Back</a></li>
+		                <li><label>Level 1</label></li>
+		                <li><a href="#">Link 1</a></li>
+		                <li class="has-submenu"><a href="#">Link 2 w/ submenu</a>
+		                    <ul class="left-submenu">
+		                        <li class="back"><a href="#">Back</a></li>
+		                        <li><label>Level 2</label></li>
+		                        <li><a href="#">...</a></li>
+		                    </ul>
+		                </li>
+		                <li><a href="#">...</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="#">The Encyclopedists</a></li>
+		        <li><a href="#">The Mayors</a></li>
+		        <li><a href="#">The Traders</a></li>
+		        <li><a href="#">The Merchant Princes</a></li>
+		      </ul>
+		    </aside>
+		
+		    <aside class="right-off-canvas-menu">
+		      <ul class="off-canvas-list">
+		        <li><label>Users</label></li>
+		        <li><a href="#">Hari Seldon</a></li>
+		        <li class="has-submenu"><a href="#">R. Giskard Reventlov</a>
+		            <ul class="right-submenu">
+		                <li class="back"><a href="#">Back</a></li>
+		                <li><label>Level 1</label></li>
+		                <li><a href="#">Link 1</a></li>
+		                <li class="has-submenu"><a href="#">Link 2 w/ submenu</a>
+		                    <ul class="right-submenu">
+		                        <li class="back"><a href="#">Back</a></li>
+		                        <li><label>Level 2</label></li>
+		                        <li><a href="#">...</a></li>
+		                    </ul>
+		                </li>
+		                <li><a href="#">...</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="#">...</a></li>
+		      </ul>
+		    </aside>
+		
+		    <section class="main-section">
+		      <!-- content goes here -->
+		      Blah blah blah
+		    </section>
+		
+		  <a class="exit-off-canvas"></a>
+		
+		  </div>
+		</div>
+	</body>
+</html>

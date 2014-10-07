@@ -1,0 +1,6 @@
+{
+    "name": "BYUIS-Science",
+    "dependencies": {
+       "foundation": "~5.1.0"
+    }
+}
