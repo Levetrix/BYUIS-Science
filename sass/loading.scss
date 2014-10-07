@@ -1,0 +1,85 @@
+@import "compass/css3";
+
+$loading-bg: radial-gradient(#222, #000);
+$loading-bg: #111;
+$loading-size: 14px;
+$loading-expand: 600%;
+$loading-total: 9;
+$loading-duration: 2000ms;
+$loading-easing: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+.loading #featured-courses {
+	& .wrap {
+	  bottom: 0;
+	  left: 0;
+	  margin: auto;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	}
+	
+	& .translate {
+	  bottom: 0;
+	  height: $loading-size;
+	  left: 0;
+	  margin: auto;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	  width: $loading-size;
+	  
+	  @include animation(translate $loading-duration $loading-easing infinite);
+	}
+	
+	& .scale {
+	  @include animation(scale $loading-duration $loading-easing infinite);
+	  height: 100%;
+	  width: 100%;
+	}
+}
+@for $i from 1 through $loading-total {
+	.loading #featured-courses {
+	  & .wrap:nth-child(#{$i}) {
+	    $j: $loading-total - $i;
+	    @include transform(rotate(360deg / $loading-total * $j));
+	  }
+	
+	  & .wrap:nth-child(#{$i}) .translate,
+	  & .wrap:nth-child(#{$i}) .scale {
+	    @include animation-delay(($i - 1) * (-$loading-duration / $loading-total));
+	  }
+	
+	  & .wrap:nth-child(#{$i}) .scale {
+	    background: hsl(360 / $loading-total * $i * 2, 100%, 70%);
+	  }
+	}
+}
+@include keyframes(translate) {
+  0% {
+    @include transform(translate3d(-#{$loading-expand}, 0, 0));
+  }
+  50% {
+    @include transform(translate3d($loading-expand, 0, 0));
+  }
+  100% {
+    @include transform(translate3d(-#{$loading-expand}, 0, 0));
+  }
+}
+
+@include keyframes(scale) {
+  0% {
+    @include transform(translateZ(0) scale(0.75, 1));
+  }
+  25% {
+    @include transform(translateZ(0) scale(1.5, 0.5));
+  }
+  50% {
+    @include transform(translateZ(0) scale(0.75, 1));
+  }
+  75% {
+    @include transform(translateZ(0) scale(1.5, 0.5));
+  }
+  100% {
+    @include transform(translateZ(0) scale(0.75, 1));
+  }
+}

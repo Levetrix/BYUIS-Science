@@ -8,13 +8,11 @@
 		&::-webkit-input-placeholder { @content; } 
 }
 
-@import "foundation/settings";
+//@import "foundation/settings";
+@import "foundation";
 @import "foundation/components/offcanvas";
 
 @import "transform/animateReplace.jquery";
-
-@import "font-awesome";
-@import "font-awesome/variables";
 
 @import "flexbox/flexbox";
 
@@ -55,14 +53,6 @@ $media-break-1: "min-width:575px";
 $media-break-1-only: $media-break-1, " and max-width:850px";
 $media-break-2: "min-width:850px";
 $media-break-2-only: $media-break-2, " and max-width:1107px";
-
-@include font-face("OpenSans", font-files("../../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf"));
-@include font-face("OpenSansLt", font-files("../../fonts/opensans-light-webfont.ttf", "../fonts/opensans-light-webfont.woff", "../fonts/opensans-light-webfont.eot", "../fonts/opensans-light-webfont.svg"));
-@include font-face("OpenSansLt_IE", font-files("../../fonts/opensans-light-webfont.ttf", "../fonts/opensans-light-webfont.woff", "../fonts/opensans-light-webfont.eot", "../fonts/opensans-light-webfont.svg"));
-@include font-face("OpenSansLtCn", font-files("../fonts/OpenSans-CondLight.ttf", "examples/bgrove.otf"));
-@include font-face("OpenSans_IE", font-files("../fonts/opensans-regular-webfont.eot", "examples/bgrove.otf"));
-
-
 
 html, body {
 	width:100%;
@@ -803,8 +793,23 @@ textarea {
 	}
 }
 
-
-
+body > #loading-div {
+	display:none;
+}
+#loading-div {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background-color:white;
+	z-index:1001;
+	
+	& #loading-div-text {
+		position:absolute;
+		top:calc( 50% - 2rem);
+	}
+}
 
 
 

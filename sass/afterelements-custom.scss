@@ -1,0 +1,53 @@
+@import "compass/css3";
+
+#featured-courses:before {
+	content: "Loading...";
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	padding-top: calc( 50% - 2rem - 66px);
+	background-color:white;
+	background-image: url(../img/ajax-loader.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index:-1;
+	
+	
+	@include transition-property(opacity z-index);
+	@include transition-timing-function(ease);
+	@include transition-duration(0.50s);
+	
+	@include opacity(0);
+}
+.loading #featured-courses:before {
+	@include opacity(1);
+	z-index: 10000;
+}
+
+.tile-featured-products li:nth-child(1):after {
+	background-image: url(../img/placeholders/placeholder1.jpg);
+}
+.tile-featured-products li:nth-child(2):after {
+	background-image: url(../img/placeholders/placeholder2.jpg);
+}
+.tile-featured-products li:nth-child(3):after {
+	background-image: url(../img/placeholders/placeholder3.jpg);
+}
+.tile-featured-products li:nth-child(4):after {
+	background-image: url(../img/placeholders/placeholder4.jpg);
+}
+.tile-featured-products li:nth-child(5):after {
+	background-image: url(../img/placeholders/placeholder5.jpg);
+}
+.tile-featured-products li:nth-child(6):after {
+	background-image: url(../img/placeholders/placeholder6.jpg);
+}
+.tile-featured-products li:nth-child(7):after {
+	background-image: url(../img/placeholders/placeholder7.jpg);
+}
+.tile-featured-products li:nth-child(8):after {
+	background-image: url(../img/placeholders/placeholder8.jpg);
+}

@@ -51,9 +51,20 @@ var showdebug=false,
 			$this.css("height",$(window).height() + "px");
 			if(showdebug) console.log("height of tile: "+$this.height());
 		}
-};
+},
+	appendStyle = function(selector, css) {
+		YUI().use('stylesheet', function (Y) {
+			var css = selector + " { "+css+") }";
+			sheet = new Y.StyleSheet(css);
+		});
+	}
+;
 
 smoothScroll.init(ssOptions);
+$("body").removeClass("not-loaded");
+$("body").addClass("loading");
+var loading = $("#loading-div").clone(true,true);
+$("#featured-courses").addClass("loading").parent().append(loading);
 //	Change the anchors with javascript for users that have it available.
 $(window).resize(function() {
 	if(showdebug) console.log("window resized!");
@@ -98,30 +109,36 @@ $(window).resize(function() {
 				var newScrollAnchor = $('<div class="hidden-scroll-anchor">&nbsp;</div>').attr("id",href.substr(1));
 				if(575 <= $(window).width()) {
 					//	Insert an invisible element with the id this points to at the desired scroll position
-					$("body").prepend(newScrollAnchor.css("top",fcYOffset));
+					$("body").append(newScrollAnchor.css("top",fcYOffset));
 				} else {
-					$("body").prepend(newScrollAnchor.css("top",($(href+"-moved").offset().top)+"px"));
+					$("body").append(newScrollAnchor.css("top",($(href+"-moved").offset().top)+"px"));
 				}
 				if(showdebug) console.log("added click behavior and scroll anchor for "+href);
 			}
 		}
 	});
 	//	Add in the data-course-background...
-	$("#featured-courses li").each(function() {
-		var $this = $(this);
-		if($this.attr("data-course-background")){
-			if(showdebug) console.log("setting background image to: " + $this.attr("data-course-background"));
-			$this.css("background-image","url('"+$this.attr("data-course-background")+"')");
-		}
-		if($this.attr("data-course-code")){
-			var newId = $this.attr("data-course-code")+(($this.attr("id").indexOf("-moved")>-1)?"-moved":"");
-			if(showdebug) console.log("setting tile id to: " + newId);
-			$this.attr("id", newId);
-		}
-	});
+	console.log("init: "+$(".initialized").length + " " + $("style").length);
+	if($(".initialized").length == 0 || $("style").length < 8) {
+		$("#featured-courses li").each(function( i ) {
+			var $this = $(this);
+			if($this.attr("data-course-background")){
+				if(showdebug) console.log("setting background image to: " + $this.attr("data-course-background"));
+				//$this.css("background-image","url('"+$this.attr("data-course-background")+"')");
+				appendStyle(".tile-featured-products li:nth-child("+(i+1)+"):after","background-image: url("+$this.attr("data-course-background")+")");
+			}
+			if($this.attr("data-course-code")){
+				var newId = $this.attr("data-course-code")+(($this.attr("id").indexOf("-moved")>-1)?"-moved":"");
+				if(showdebug) console.log("setting tile id to: " + newId);
+				$this.attr("id", newId);
+			}
+		});
+		appendStyle(".loaded" + " #featured-courses:before"," z-index:-1;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;");
+	}
 	
 	//	The not-loaded class is removed to indicate success
 	$(".not-loaded").removeClass("not-loaded").addClass("initialized");
+	//$(".loading").removeClass("loading").addClass("loaded");
 });
-$(window).resize();
+//$(window).resize();
 	

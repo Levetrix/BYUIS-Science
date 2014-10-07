@@ -4,16 +4,19 @@
 	<meta charset="ISO-8859-1">
 	<title>University Core and GE Courses - BYU Independent Study</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
+	<link id="fonts" rel="stylesheet" href="stylesheets/fonts.css" type="text/css" />
+	<link id="maincss" rel="stylesheet" href="stylesheets/main.css" type="text/css" />
+	<link id="afterelementscss" rel="stylesheet" href="stylesheets/afterelements-custom.css" type="text/css" />
+	<!--link id="loadingcss" rel="stylesheet" href="stylesheets/loading.css" type="text/css" /-->
 	<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-	<script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/jquery-2.1.1.js"></script>
 	<script src="js/foundation/foundation.js"></script>
 	<script src="js/foundation/foundation.offcanvas.js"></script>
-	<script src="js/vendor/jquery-2.1.1.js"></script>
+  <script>
+    $(document).ready(function(){$(document).foundation();});
+  </script>
 	<script src="js/vendor/jquery-ui-1.11.0.js"></script>
-	<script src="js/foundation/foundation.js"></script>
-	<script src="js/foundation/foundation.offcanvas.js"></script>
 	<script src="js/vendor/yui-min.js"></script>
 	<!--
 		<script src="js/animateReplace.jquery.js"></script>
@@ -33,7 +36,7 @@
 		}, false, debug);	//	The last two parameters are optional and here are set to their default values. They govern an optional setting if you supply null for the handler function and rely on the default setting there, and the debug setting which needs to be true to include debug information in the console.
 	</script>
 	
-	<script type="text/javascript">
+	<script type="text/javascript">/*
 		(function($){	//	We've wrappered this javascript to keep it contained.
 			var debug = false;	//	development variable. optional and could be deleted here without consequence to execution.
 			$(document).foundation();	//	Initialize the foundation framework.
@@ -62,7 +65,7 @@
 					}
 				});
 			});
-		})(jQuery);
+		})(jQuery);*/
 	</script>
 	<script language="javascript">
 	/*$(document).ready(function(){
@@ -73,7 +76,7 @@
 	});*/
 	</script>
 </head>
-<body>
+<body class="not-loaded">
 <!-- OFF CANVAS SECTIONS WRAPPING THE MAIN CONTENT -->
 <div class="off-canvas-wrap">
 	<div class="inner-wrap">
@@ -101,98 +104,76 @@
 			</ul>
 		</aside>				
 		<!--	Begin Main Content	-->
-		<div class="maincontent">
+		<section class="main-section">
 			<div class="stripe four">
 				<h1>BYU&nbsp;Independent&nbsp;Study Science&nbsp;Courses</h1>
 				<h2>Our Top Picks</h2>
 				<ul class="tile-featured-products" id="featured-courses">
-					<li id="AAA-100" data-course-code="AAA-100" data-course-background="img/placeholders/placeholder1.jpg" class="not-loaded">
-						<a href="#featured-courses" class="close-featured-tile">X</a>
-						<a href="#AAA-100">
-							<h2>Placeholder Course Title 1</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla vel libero ac consequat. Integer et libero nec ex consectetur luctus. Aenean gravida vehicula justo eu lacinia. Nam sit amet rutrum tortor. Vivamus et nunc imperdiet, hendrerit nisl et, rhoncus est. Nunc risus nulla, ultricies eu elit et, blandit tempus neque. Nullam a posuere lorem. Proin facilisis viverra tellus, a tempus nisl mattis eget.</p>
+					<li id="EARTH-043-moved" data-course-code="EARTH-043" data-course-background="img/EARTH2.jpg" class="cursor-pointer initialized">
+						<a class="close-featured-tile" data-href="#EARTH-043">X</a>
+						<a data-href="#EARTH-043">
+							<h2>EARTH SCIENCE</h2>
+							<p>Unearth the processes both man and nature have developed in our universe, including solar, energy, atmospheric, and biological systems.</p>
 							<div class="shader">
-								<h3>AAA-100</h3>
+								<h3>EARTH-043</h3>
 							</div>
 						</a>
-						<button><a href="http://is.byu.edu/site/courses/description.cfm?AAA-100">More Info</a></button>
+						<button><a href="http://is.byu.edu/site/courses/description.cfm?EARTH-043-200">More Info</a></button>
 					</li>
-					<li id="AAA-101" data-course-code="AAA-101" data-course-background="../img/Anatomy.jpg" class="not-loaded">
-						<a href="#featured-courses" class="close-featured-tile">X</a>
-						<a href="#AAA-101">
-							<h2>Title Placeholder 2</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla vel libero ac consequat. Integer et libero nec ex consectetur luctus. Aenean gravida vehicula justo eu lacinia. Nam sit amet rutrum tortor. Vivamus et nunc imperdiet, hendrerit nisl et, rhoncus est. Nunc risus nulla, ultricies eu elit et, blandit tempus neque. Nullam a posuere lorem. Proin facilisis viverra tellus, a tempus nisl mattis eget.</p>
+					<li id="NDFS-100-moved" data-course-code="NDFS-100" data-course-background="img/nutrition.jpg" class="cursor-pointer initialized">
+						<a class="close-featured-tile" data-href="#NDFS-100">X</a>
+						<a data-href="#NDFS-100">
+							<h2>ESSENTIALS OF HUMAN NUTRITION</h2>
+							<p> This general education nutrition course explores studies of nutritional facts as a way to understand dietary choices, consequences of those choices, and scientifically controversial food topics.</p>
 							<div class="shader">
-								<h3>AAA-101</h3>
+								<h3>NDFS-100</h3>
 							</div>
 						</a>
-						<button><a href="http://is.byu.edu/site/courses/description.cfm?AAA-100">More Info</a></button>
+						<button><a href="http://is.byu.edu/site/courses/description.cfm?NDFS-100-200">More Info</a></button>
 					</li>
-					<li id="AAA-102" data-course-code="AAA-102" data-course-background="img/placeholders/placeholder3.jpg" class="not-loaded">
-						<a href="#featured-courses" class="close-featured-tile">X</a>
-						<a href="#AAA-102">
-							<h2>Course Placeholder 3</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla vel libero ac consequat. Integer et libero nec ex consectetur luctus. Aenean gravida vehicula justo eu lacinia. Nam sit amet rutrum tortor. Vivamus et nunc imperdiet, hendrerit nisl et, rhoncus est. Nunc risus nulla, ultricies eu elit et, blandit tempus neque. Nullam a posuere lorem. Proin facilisis viverra tellus, a tempus nisl mattis eget.</p>
+					<li id="PHSCS-127-moved" data-course-code="PHSCS-127" data-course-background="img/Astronomy.jpg" class="cursor-pointer initialized">
+						<a class="close-featured-tile" data-href="#PHSCS-127">X</a>
+						<a data-href="#PHSCS-127">
+							<h2>DESCRIPTIVE ASTRONOMY</h2>
+							<p>In this Award-Winning astronomy course, university students will explore the content and history of the cosmos, the nature of the universe, and learn how physics apply to astronomy.</p>
 							<div class="shader">
-								<h3>AAA-102</h3>
+								<h3>PHSCS-127</h3>
 							</div>
 						</a>
-						<button><a href="http://is.byu.edu/site/courses/description.cfm?AAA-100">More Info</a></button>
+						<button><a href="http://is.byu.edu/site/courses/description.cfm?PHSCS-127-201">More Info</a></button>
 					</li>
-					<li id="AAA-103" data-course-code="AAA-103" data-course-background="img/placeholders/placeholder4.jpg" class="not-loaded">
-						<a href="#featured-courses" class="close-featured-tile">X</a>
-						<a href="#AAA-103">			
-							<h2>Title of Placeholder 4</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla vel libero ac consequat. Integer et libero nec ex consectetur luctus. Aenean gravida vehicula justo eu lacinia. Nam sit amet rutrum tortor. Vivamus et nunc imperdiet, hendrerit nisl et, rhoncus est. Nunc risus nulla, ultricies eu elit et, blandit tempus neque. Nullam a posuere lorem. Proin facilisis viverra tellus, a tempus nisl mattis eget.</p>
+					<li id="PDBIO-210-moved" data-course-code="PDBIO-210" data-course-background="img/Anatomy.jpg" class="cursor-pointer initialized">
+						<a class="close-featured-tile" data-href="#PDBIO-210">X</a>
+						<a data-href="#PDBIO-210">
+							<h2>HUMAN ANATOMY</h2>
+							<p>This university-level anatomy course presents the structure and function of the human body. Students in nonmedical majors can fulfill GE Requirements from home by utilizing cutting-edge virtual lab software. </p>
 							<div class="shader">
-								<h3>AAA-103</h3>
+								<h3>PDBIO-210</h3>
 							</div>
 						</a>
-						<button><a href="http://is.byu.edu/site/courses/description.cfm?AAA-100">More Info</a></button>
+						<button><a href="http://is.byu.edu/site/courses/description.cfm?PDBIO-210-M001">More Info</a></button>
 					</li>
-					<li id="AAA-104" data-course-code="AAA-104" data-course-background="img/placeholders/placeholder5.jpg" class="not-loaded">
-						<a href="#featured-courses" class="close-featured-tile">X</a>
-						<a href="#AAA-104">			
-							<h2>Course Place of Holding 5</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla vel libero ac consequat. Integer et libero nec ex consectetur luctus. Aenean gravida vehicula justo eu lacinia. Nam sit amet rutrum tortor. Vivamus et nunc imperdiet, hendrerit nisl et, rhoncus est. Nunc risus nulla, ultricies eu elit et, blandit tempus neque. Nullam a posuere lorem. Proin facilisis viverra tellus, a tempus nisl mattis eget.</p>
+					<li id="EARTH-041-moved" data-course-code="EARTH-041" data-course-background="img/EARTH1.jpg" class="cursor-pointer initialized">
+						<a class="close-featured-tile" data-href="#EARTH-041">X</a>
+						<a data-href="#EARTH-041">
+							<h2>EARTH SCIENCE</h2>
+							<p>Discover the science behind recent natural disasters such as hurricanes, earthquakes, and tsunamis. Students in this high school course will also learn about the structure of our atmosphere and how it makes life on earth possible.</p>
 							<div class="shader">
-								<h3>AAA-104</h3>
+								<h3>EARTH-041</h3>
 							</div>
 						</a>
-						<button><a href="http://is.byu.edu/site/courses/description.cfm?AAA-100">More Info</a></button>
+						<button><a href="http://is.byu.edu/site/courses/description.cfm?EARTH-041-200">More Info</a></button>
 					</li>
-					<li id="AAA-105" data-course-code="AAA-105" data-course-background="img/placeholders/placeholder6.jpg" class="not-loaded">
-						<a href="#featured-courses" class="close-featured-tile">X</a>
-						<a href="#AAA-105">			
-							<h2>Placeholding 106</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla vel libero ac consequat. Integer et libero nec ex consectetur luctus. Aenean gravida vehicula justo eu lacinia. Nam sit amet rutrum tortor. Vivamus et nunc imperdiet, hendrerit nisl et, rhoncus est. Nunc risus nulla, ultricies eu elit et, blandit tempus neque. Nullam a posuere lorem. Proin facilisis viverra tellus, a tempus nisl mattis eget.</p>
+					<li id="EXSC-221-moved" data-course-code="EXSC-221" data-course-background="img/Wellness.jpg" class="cursor-pointer initialized">
+						<a class="close-featured-tile" data-href="#EXSC-221">X</a>
+						<a data-href="#EXSC-221">
+							<h2>SCIENCE OF WELLNESS</h2>
+							<p>Check out this brand-new general education option for university students! EXSC 221 draws from exercise, biological, behavior, and social sciences to offer a unique approach to the wellness of the individual as a whole. </p>
 							<div class="shader">
-								<h3>AAA-105</h3>
+								<h3>EXSC-221</h3>
 							</div>
 						</a>
-						<button><a href="http://is.byu.edu/site/courses/description.cfm?AAA-100">More Info</a></button>
-					</li>
-					<li id="AAA-106" data-course-code="AAA-106" data-course-background="img/placeholders/placeholder7.jpg" class="not-loaded">
-						<a href="#featured-courses" class="close-featured-tile">X</a>
-						<a href="#AAA-106">			
-							<h2>Remove This 7</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla vel libero ac consequat. Integer et libero nec ex consectetur luctus. Aenean gravida vehicula justo eu lacinia. Nam sit amet rutrum tortor. Vivamus et nunc imperdiet, hendrerit nisl et, rhoncus est. Nunc risus nulla, ultricies eu elit et, blandit tempus neque. Nullam a posuere lorem. Proin facilisis viverra tellus, a tempus nisl mattis eget.</p>
-							<div class="shader">
-								<h3>AAA-106</h3>
-							</div>
-						</a>
-						<button><a href="http://is.byu.edu/site/courses/description.cfm?AAA-100">More Info</a></button>
-					</li>
-					<li id="AAA-107" data-course-code="AAA-107" data-course-background="img/placeholders/placeholder8.jpg" class="not-loaded">
-						<a href="#featured-courses" class="close-featured-tile">X</a>
-						<a href="#AAA-107">			
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla vel libero ac consequat. Integer et libero nec ex consectetur luctus. Aenean gravida vehicula justo eu lacinia. Nam sit amet rutrum tortor. Vivamus et nunc imperdiet, hendrerit nisl et, rhoncus est. Nunc risus nulla, ultricies eu elit et, blandit tempus neque. Nullam a posuere lorem. Proin facilisis viverra tellus, a tempus nisl mattis eget.</p>
-							<h2>Last Placeholder, Part 8</h2>
-							<div class="shader">
-								<h3>AAA-107</h3>
-							</div>
-						</a>
-						<button><a href="http://is.byu.edu/site/courses/description.cfm?AAA-100">More Info</a></button>
+						<button><a href="http://is.byu.edu/site/courses/description.cfm?EXSC-221-M001">More Info</a></button>
 					</li>
 				</ul>
 			</div><div class="stripe three">
@@ -246,7 +227,7 @@
 			</div>
 			
 			
-		</div>		
+		</section>		
 		<!--	End Main Content -->
 	</div>
 </div>
@@ -266,5 +247,53 @@
 <script src='js/vendor/smooth-scroll.min.js'></script>
 <script src="js/customScroll.js"></script>
 <script src='js/catalogData.js'></script>
+<div id="loading-div">
+	<div id="loading-div-text">Loading...</div>
+	<div class="wrap">
+	  <div class="translate">
+	    <div class="scale"></div>
+	  </div>
+	</div>
+	<div class="wrap">
+	  <div class="translate">
+	    <div class="scale"></div>
+	  </div>
+	</div>
+	<div class="wrap">
+	  <div class="translate">
+	    <div class="scale"></div>
+	  </div>
+	</div>
+	<div class="wrap">
+	  <div class="translate">
+	    <div class="scale"></div>
+	  </div>
+	</div>
+	<div class="wrap">
+	  <div class="translate">
+	    <div class="scale"></div>
+	  </div>
+	</div>
+	<div class="wrap">
+	  <div class="translate">
+	    <div class="scale"></div>
+	  </div>
+	</div>
+	<div class="wrap">
+	  <div class="translate">
+	    <div class="scale"></div>
+	  </div>
+	</div>
+	<div class="wrap">
+	  <div class="translate">
+	    <div class="scale"></div>
+	  </div>
+	</div>
+	<div class="wrap">
+	  <div class="translate">
+	    <div class="scale"></div>
+	  </div>
+	</div>
+</div>
 </body>
 </html>

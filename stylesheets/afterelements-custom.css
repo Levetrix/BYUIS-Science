@@ -1,0 +1,77 @@
+/* line 3, ../sass/afterelements-custom.scss */
+#featured-courses:before {
+  content: "Loading...";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: calc( 50% - 2rem - 66px);
+  background-color: white;
+  background-image: url(../img/ajax-loader.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  -moz-transition-property: opacity, z-index;
+  -o-transition-property: opacity, z-index;
+  -webkit-transition-property: opacity, z-index;
+  transition-property: opacity z-index;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 25, ../sass/afterelements-custom.scss */
+.loading #featured-courses:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  z-index: 10000;
+}
+
+/* line 30, ../sass/afterelements-custom.scss */
+.tile-featured-products li:nth-child(1):after {
+  background-image: url(../img/placeholders/placeholder1.jpg);
+}
+
+/* line 33, ../sass/afterelements-custom.scss */
+.tile-featured-products li:nth-child(2):after {
+  background-image: url(../img/placeholders/placeholder2.jpg);
+}
+
+/* line 36, ../sass/afterelements-custom.scss */
+.tile-featured-products li:nth-child(3):after {
+  background-image: url(../img/placeholders/placeholder3.jpg);
+}
+
+/* line 39, ../sass/afterelements-custom.scss */
+.tile-featured-products li:nth-child(4):after {
+  background-image: url(../img/placeholders/placeholder4.jpg);
+}
+
+/* line 42, ../sass/afterelements-custom.scss */
+.tile-featured-products li:nth-child(5):after {
+  background-image: url(../img/placeholders/placeholder5.jpg);
+}
+
+/* line 45, ../sass/afterelements-custom.scss */
+.tile-featured-products li:nth-child(6):after {
+  background-image: url(../img/placeholders/placeholder6.jpg);
+}
+
+/* line 48, ../sass/afterelements-custom.scss */
+.tile-featured-products li:nth-child(7):after {
+  background-image: url(../img/placeholders/placeholder7.jpg);
+}
+
+/* line 51, ../sass/afterelements-custom.scss */
+.tile-featured-products li:nth-child(8):after {
+  background-image: url(../img/placeholders/placeholder8.jpg);
+}
