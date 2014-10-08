@@ -1,4 +1,4 @@
-var showdebug=false,
+var showdebug=true,
 	ssOptions = {
 		speed: 250,
 		easing: 'linear',
@@ -51,7 +51,14 @@ var showdebug=false,
 			$this.css("height",$(window).height() + "px");
 			if(showdebug) console.log("height of tile: "+$this.height());
 		}
-};
+},
+appendStyle = function(selector, newCSS) {
+	YUI().use('stylesheet', function (Y) {
+		var css = selector + " { "+newCSS+" }";
+		sheet = new Y.StyleSheet(css);
+	});
+}
+;
 
 smoothScroll.init(ssOptions);
 //	Change the anchors with javascript for users that have it available.
@@ -109,19 +116,34 @@ $(window).resize(function() {
 	//	Add in the data-course-background...
 	$("#featured-courses li").each(function() {
 		var $this = $(this);
-		if($this.attr("data-course-background")){
-			if(showdebug) console.log("setting background image to: " + $this.attr("data-course-background"));
-			$this.css("background-image","url('"+$this.attr("data-course-background")+"')");
-		}
+		//if($this.attr("data-course-background")){
+			//if(showdebug) console.log("setting background image to: " + $this.attr("data-course-background"));
+			//$this.css("background-image","url('"+$this.attr("data-course-background")+"')");
+		//}
 		if($this.attr("data-course-code")){
 			var newId = $this.attr("data-course-code")+(($this.attr("id").indexOf("-moved")>-1)?"-moved":"");
 			if(showdebug) console.log("setting tile id to: " + newId);
 			$this.attr("id", newId);
 		}
+		console.log("init: "+$(".initialized").length + " " + $("style").length);
+		$("#featured-courses li").each(function( i ) {
+			var $this = $(this);
+			if($this.attr("data-course-background")){
+				if(showdebug) console.log("setting background image to: " + $this.attr("data-course-background"));
+				//$this.css("background-image","url('"+$this.attr("data-course-background")+"')");
+				appendStyle(".tile-featured-products li:nth-child("+(i+1)+"):after","background-image: url("+$this.attr("data-course-background")+")");
+			}
+			if($this.attr("data-course-code")){
+				var newId = $this.attr("data-course-code")+(($this.attr("id").indexOf("-moved")>-1)?"-moved":"");
+				if(showdebug) console.log("setting tile id to: " + newId);
+				$this.attr("id", newId);
+			}
+		});
+		appendStyle(".loaded" + " #featured-courses:before"," z-index:-1;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;");
 	});
 	
 	//	The not-loaded class is removed to indicate success
-	$(".not-loaded").removeClass("not-loaded").addClass("initialized");
+	$(".loading").removeClass("loading").addClass("initialized");
 });
 $(window).resize();
 	
