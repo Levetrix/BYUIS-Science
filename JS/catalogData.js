@@ -3,7 +3,8 @@ Array.prototype.shuffle = function(){ //v1.0
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 };
-
+$("#loading-div").clone(true,true).insertAfter($("#featured-courses"));
+$("#featured-courses").parent().addClass("loading");
 $.ajax({
 		url: window.location.protocol + "//is.byu.edu/site/courses/catalogdata.json.cfm",
 		dataType: "json"
@@ -93,6 +94,7 @@ $.ajax({
 				$("#featured-courses").append(newfeaturedCourse);
 			}
 			$(window).resize();
+			$(".loading").removeClass("loading");
 		});
 	})
 ;
