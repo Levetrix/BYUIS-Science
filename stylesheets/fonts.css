@@ -2492,3 +2492,24 @@
 .fa-bomb:before {
   content: "";
 }
+
+@font-face {
+  font-family: "OpenSans";
+  src: url('../fonts/../../fonts/OpenSans-regular.ttf') format('truetype'), url('../fonts/../fonts/OpenSans-regular.ttf?1411764541') format('truetype'), url('../fonts/../fonts/OpenSans-regular.ttf?1411764541') format('truetype'), url('../fonts/../fonts/OpenSans-regular.ttf?1411764541') format('truetype');
+}
+@font-face {
+  font-family: "OpenSansLt";
+  src: url('../fonts/../../fonts/opensans-light-webfont.ttf') format('truetype'), url('../fonts/../fonts/opensans-light-webfont.woff?1411764541') format('woff'), url('../fonts/../fonts/opensans-light-webfont.eot?1411764541') format('embedded-opentype'), url('../fonts/../fonts/opensans-light-webfont.svg?1411764541') format('svg');
+}
+@font-face {
+  font-family: "OpenSansLt_IE";
+  src: url('../fonts/../../fonts/opensans-light-webfont.ttf') format('truetype'), url('../fonts/../fonts/opensans-light-webfont.woff?1411764541') format('woff'), url('../fonts/../fonts/opensans-light-webfont.eot?1411764541') format('embedded-opentype'), url('../fonts/../fonts/opensans-light-webfont.svg?1411764541') format('svg');
+}
+@font-face {
+  font-family: "OpenSansLtCn";
+  src: url('../fonts/../fonts/OpenSans-CondLight.ttf?1411764541') format('truetype'), url('../fonts/examples/bgrove.otf') format('opentype');
+}
+@font-face {
+  font-family: "OpenSans_IE";
+  src: url('../fonts/../fonts/opensans-regular-webfont.eot?1411764541') format('embedded-opentype'), url('../fonts/examples/bgrove.otf') format('opentype');
+}
