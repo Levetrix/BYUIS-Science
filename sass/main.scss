@@ -319,21 +319,20 @@ h3 {
 			position: absolute;
 			bottom: $med-gutter;
 			left: calc( 50% - #{$quarter / 4} );
-			
+			padding:0;
+			padding-top:3px;
 			margin: #{$med-gutter / 2} auto;
-			
 			z-index: 400;
-			
-			height:4rem;
+			height:2.3rem;
 			width:#{$quarter / 2};
+			color:$blue;
+			background-color:transparent;
+			border:1px solid $blue;			
 			
-			color:$white;
-			font-size:2rem;
-			
-			background-color:$charcoal;
-		  @include background-image(linear-gradient(to bottom right, $charcoal, black));	/*	Unknown why compass throws an error at this. It is right.	*/
-		  /*@include border-radius(1rem);*/
-		  border: 3px solid $blue;
+			//background-color:$charcoal;
+		  	//@include background-image(linear-gradient(to bottom right, $charcoal, black));	/*	Unknown why compass throws an error at this. It is right.	*/
+		 	 /*@include border-radius(1rem);*/
+		 	 //border: 3px solid $blue;
 		  
 			box-sizing:border-box;
 			min-height:32px;
@@ -344,16 +343,25 @@ h3 {
 			@include transition-duration(0.750s);
 			
 			&:hover {
-			  @include background-image(linear-gradient(to bottom right, black, $charcoal));	/*	Unknown why compass throws an error at this. It is right.	*/
+			  //@include background-image(linear-gradient(to bottom right, black, $charcoal));	/*	Unknown why compass throws an error at this. It is right.	*/
 			  border: 1px solid $white;
+			
+				& a {
+					color:#fff;
+				}
 			}
 			& a {
 				color:$white;
+				height:100%;
+				width:100%;
+				display:block;
+				line-height:1.6em;
 			}
 		}
 		/*	Background images (shown initially, hidden with click)	*/
 			&:hover {
 				background:transparent;
+				
 			}
 		&:after {
 			content: "";
@@ -556,17 +564,19 @@ textarea {
 
 .submitButton {
 	padding-top:7px;
-	color:#fff;
+	border:1px solid $blue;
+	color:$white;
 	margin: #{$med-gutter / 2} auto;
 	box-sizing:border-box;
 	min-height:32px;
-	background-color:$blue;
+	background-color:transparent;
 	width:#{$quarter / 2};
 }
 
 .submitButton:hover	{
 	cursor:pointer;
-	background-color:rgba($blue, .9);
+	border:1px solid #fff;
+	color:#fff
 }
 
 .form-success {
