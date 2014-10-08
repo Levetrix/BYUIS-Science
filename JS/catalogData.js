@@ -87,7 +87,9 @@ $.ajax({
 						}
 					}
 					if($this.text().toLowerCase().trim() == "more info") {
-						$this.attr("href", "http://is.byu.edu/site/courses/description.cfm?"+course['types'].pop()['short-title'].trim());
+						$this.attr("href", "http://is.byu.edu/site/courses/description.cfm?title="+course['types'].pop()['short-title'].trim());
+						$this.off(".tileScroll");
+						$this.on("click.catalogData",function(e){ /*	Replacing the usual link functionality... it broke	*/ e.stopPropagation();window.location = $(this).attr("href");});
 					}
 				});
 				newfeaturedCourse.find("p").html(course['marketing-text']);
