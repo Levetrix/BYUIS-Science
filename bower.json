@@ -1,6 +1,9 @@
 {
-    "name": "BYUIS-Science",
-    "dependencies": {
-       "foundation": "~5.1.0"
-    }
+  "name": "BYUIS-Science",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#~5.4.5"
+  },
+  "resolutions": {
+    "foundation": "~5.4.5"
+  }
 }

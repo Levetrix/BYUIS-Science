@@ -1,5 +1,5 @@
 # Require any additional compass plugins here.
-require "zurb-foundation"
+add_import_path "bower_components/foundation/scss"
 #add_import_path "sass/foundation/bower_components"
 
 # Set this to the root of your project when deployed:
