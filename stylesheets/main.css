@@ -3816,12 +3816,12 @@ ul.off-canvas-list li a:hover {
 
 @font-face {
   font-family: "OpenSansLt";
-  src: url('fonts/../../fonts/opensans-light-webfont.ttf') format('truetype'), url('fonts/../fonts/opensans-light-webfont.woff') format('woff'), url('fonts/../fonts/opensans-light-webfont.eot') format('embedded-opentype'), url('fonts/../fonts/opensans-light-webfont.svg') format('svg');
+  src: url('fonts/../../fonts/opensans-light-webfont.ttf') format('truetype'), url('fonts/../../fonts/opensans-light-webfont.woff') format('woff'), url('fonts/../fonts/opensans-light-webfont.eot') format('embedded-opentype'), url('fonts/../fonts/opensans-light-webfont.svg') format('svg');
 }
 
 @font-face {
   font-family: "OpenSansLt_IE";
-  src: url('fonts/../../fonts/opensans-light-webfont.ttf') format('truetype'), url('fonts/../fonts/opensans-light-webfont.woff') format('woff'), url('fonts/../fonts/opensans-light-webfont.eot') format('embedded-opentype'), url('fonts/../fonts/opensans-light-webfont.svg') format('svg');
+  src: url('fonts/../../fonts/opensans-light-webfont.ttf') format('truetype'), url('fonts/../../fonts/opensans-light-webfont.woff') format('woff'), url('fonts/../fonts/opensans-light-webfont.eot') format('embedded-opentype'), url('fonts/../fonts/opensans-light-webfont.svg') format('svg');
 }
 
 @font-face {
@@ -3970,7 +3970,7 @@ h3 {
   flex: 1 calc(100% - 2.01rem);
   /*margin-top:$med-gutter;*/
   font-size: 1.2em;
-  max-width: 13.8125rem;
+  max-width: 212px;
   line-height: 1.2em;
   text-align: left;
   background-color: white;
@@ -4570,7 +4570,7 @@ textarea::-webkit-input-placeholder {
 @media (min-width: 575px) and (max-width: 850px) {
   /* line 697, ../sass/main.scss */
   .two ul {
-    width: calc(2 * 13.8125rem + 2.01rem);
+    width: calc(2 * 13.8125rem + 2.01rem * 2);
   }
   /* line 700, ../sass/main.scss */
   .two ul li {
@@ -4589,7 +4589,7 @@ textarea::-webkit-input-placeholder {
 @media (min-width: 850px) and (max-width: 1107px) {
   /* line 714, ../sass/main.scss */
   .two ul {
-    width: calc(3 * 13.8125rem + 2.01rem * 2);
+    width: calc(3 * 13.8125rem + 2.01rem * 3);
   }
 
   /* line 718, ../sass/main.scss */
@@ -4648,7 +4648,7 @@ textarea::-webkit-input-placeholder {
   /* line 766, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(3n) {
     right: 0;
-    left: initial;
+    left: auto;
   }
   /* line 770, ../sass/main.scss */
   ul.tile-featured-products > li:nth-child(-n + 3) {
