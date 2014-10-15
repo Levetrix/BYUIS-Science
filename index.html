@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Test repo chaining... and back again -->
-	<meta charset="ISO-8859-1">
 	<title>University Core and GE Courses - BYU Independent Study</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="ISO-8859-1">
+	
 	<link rel="stylesheet" href="lib/Foundation/css/foundation/offcanvasmenu.css" type="text/css" />
 	<link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
 	<link rel="stylesheet" href="stylesheets/loading.css" type="text/css" />
 	<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+	
 	<script src="js/vendor/jquery.js"></script>
-	<script src="lib/Foundation/js/app.js"></script>
-	<script src="lib/Foundation/bower_components/foundation.js"></script>
-	<script src="lib/Foundation/bower_components/foundation/foundation.offcanvas.js"></script>
+	<script src="lib/Foundation/bower_components/modernizr/modernizr.js"></script>
+	<!-- <script src="lib/Foundation/bower_components/foundation/js/foundation.js"></script>
+	<script src="lib/Foundation/bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
 	<script src="js/vendor/jquery-2.1.1.js"></script>
+	-->
+	
+    <script src="lib/Foundation/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="lib/Foundation/bower_components/foundation/js/foundation.min.js"></script>
+    <!--<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>-->
+    <script src="lib/Foundation/js/app.js"></script>
+    
 	<script src="js/vendor/jquery-ui-1.11.0.js"></script>
 	<script src="js/vendor/yui-min.js"></script>
 	<!--
@@ -23,70 +31,8 @@
 		<script src="JS/fadein.js"></script>
 		<script src="JS/ge-data.js"></script>
 	-->
+	
 	<script type="text/javascript" src="//is.byu.edu/site/resources/lead_submit.js"></script>
-	
-	<script type="text/javascript">
-		var debug = false;
-		attachForm("#contactForm",".clickhere", function( data, textStatus, jqXHR ){
-			if(debug){console.log("ajax connection done.")};
-			//	This is an example of a simple thing you could use to create a new element after your form. Placing a "placeholder" element provides you a natural way to move/place the response data where you want it. For flexibility of design, the way you've done it here is actually better. Therefore this is commented out.
-			//$('<div id="form-response">' + data.message + '</div>').insertAfter($("#contactForm"));
-			$("#form-submit").html('<img src="img/green-check-mark.png" class="form-success" />Thank you for your feedback! We appreciate your willingness to share your thoughts with us.').addClass("form-success");
-		}, false, debug);	//	The last two parameters are optional and here are set to their default values. They govern an optional setting if you supply null for the handler function and rely on the default setting there, and the debug setting which needs to be true to include debug information in the console.
-	</script>
-	
-	<script>
-
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-	  ga('create', 'UA-2108793-1', 'byu.edu');
-	  ga('send', 'pageview');
-		ga('require', 'ecommerce', 'ecommerce.js');   // Load the ecommerce plug-in.
-	
-	</script>
-	
-	<script type="text/javascript">
-		(function($){	//	We've wrappered this javascript to keep it contained.
-			var debug = false;	//	development variable. optional and could be deleted here without consequence to execution.
-			$(document).foundation();	//	Initialize the foundation framework.
-				$(document).ready(function () {	//	Run the rest on document "ready" state change. (if document is somehow magically already in that state, this will fire immediately.)
-					//	Because this function is attached in multiple places, we define it as a variable so that it can exist once only in the code.
-				var closeMenuFunction = function() {
-					if($('.move-right').length > 0) {	//	This forces the function to operate as only a "close".
-						$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
-						$('.maincontent').unbind("click.menumain");
-						if(debug) console.log("The menu should be closed/closing. The click handler has been removed from the .maincontent element.");
-					}
-				};
-				$('.left-small').bind("click.menu", function() {
-					if(debug) console.log("left-small clicked.");
-					//	Toggle the menu. This institutes the "current" state the user is requesting. (As in, it adds the class we're checking for later.)
-					$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
-					//	Detect the existence of .move-right on the document. If it exists, then the menu is currently open.
-					if($('.move-right').length == 0) {
-						//	The menu has been closed!
-						if(debug) console.log("The menu has been closed!");
-							$('.maincontent').unbind("click.menumain");
-						} else {
-						//	The menu is open!
-						if(debug) console.log("The menu is open!");
-						$('.maincontent').bind("click.menumain", closeMenuFunction);
-					}
-				});
-			});
-		})(jQuery);
-	</script>
-	<script language="javascript">
-	/*$(document).ready(function(){
-		var twoLIs = $(".two li");
-		twoLIs.each(function(i){
-			  $(this).css('z-index', twoLIs.length-i);
-			});
-	});*/
-	</script>
 </head>
 <body>
 <!-- OFF CANVAS SECTIONS WRAPPING THE MAIN CONTENT -->
@@ -328,6 +274,69 @@
 		</div>
 	</div>
 </div>
+<script src="lib/Foundation/js/app.js"></script>
 <script src='JS/catalogData.js'></script>
+	<script type="text/javascript">
+		var debug = false;
+		attachForm("#contactForm",".clickhere", function( data, textStatus, jqXHR ){
+			if(debug){console.log("ajax connection done.")};
+			//	This is an example of a simple thing you could use to create a new element after your form. Placing a "placeholder" element provides you a natural way to move/place the response data where you want it. For flexibility of design, the way you've done it here is actually better. Therefore this is commented out.
+			//$('<div id="form-response">' + data.message + '</div>').insertAfter($("#contactForm"));
+			$("#form-submit").html('<img src="img/green-check-mark.png" class="form-success" />Thank you for your feedback! We appreciate your willingness to share your thoughts with us.').addClass("form-success");
+		}, false, debug);	//	The last two parameters are optional and here are set to their default values. They govern an optional setting if you supply null for the handler function and rely on the default setting there, and the debug setting which needs to be true to include debug information in the console.
+	</script>
+	
+	<script>
+
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-2108793-1', 'byu.edu');
+	  ga('send', 'pageview');
+		ga('require', 'ecommerce', 'ecommerce.js');   // Load the ecommerce plug-in.
+	
+	</script>
+	
+	<script type="text/javascript">
+		(function($){	//	We've wrappered this javascript to keep it contained.
+			var debug = false;	//	development variable. optional and could be deleted here without consequence to execution.
+			$(document).foundation();	//	Initialize the foundation framework.
+				$(document).ready(function () {	//	Run the rest on document "ready" state change. (if document is somehow magically already in that state, this will fire immediately.)
+					//	Because this function is attached in multiple places, we define it as a variable so that it can exist once only in the code.
+				var closeMenuFunction = function() {
+					if($('.move-right').length > 0) {	//	This forces the function to operate as only a "close".
+						$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+						$('.maincontent').unbind("click.menumain");
+						if(debug) console.log("The menu should be closed/closing. The click handler has been removed from the .maincontent element.");
+					}
+				};
+				$('.left-small').bind("click.menu", function() {
+					if(debug) console.log("left-small clicked.");
+					//	Toggle the menu. This institutes the "current" state the user is requesting. (As in, it adds the class we're checking for later.)
+					$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+					//	Detect the existence of .move-right on the document. If it exists, then the menu is currently open.
+					if($('.move-right').length == 0) {
+						//	The menu has been closed!
+						if(debug) console.log("The menu has been closed!");
+							$('.maincontent').unbind("click.menumain");
+						} else {
+						//	The menu is open!
+						if(debug) console.log("The menu is open!");
+						$('.maincontent').bind("click.menumain", closeMenuFunction);
+					}
+				});
+			});
+		})(jQuery);
+	</script>
+	<script language="javascript">
+	/*$(document).ready(function(){
+		var twoLIs = $(".two li");
+		twoLIs.each(function(i){
+			  $(this).css('z-index', twoLIs.length-i);
+			});
+	});*/
+	</script>
 </body>
 </html>
