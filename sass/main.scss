@@ -57,8 +57,8 @@ $media-break-2: "min-width:850px";
 $media-break-2-only: $media-break-2, " and max-width:1107px";
 
 @include font-face("OpenSans", font-files("../../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf", "../fonts/OpenSans-regular.ttf"));
-@include font-face("OpenSansLt", font-files("../../fonts/opensans-light-webfont.ttf", "../fonts/opensans-light-webfont.woff", "../fonts/opensans-light-webfont.eot", "../fonts/opensans-light-webfont.svg"));
-@include font-face("OpenSansLt_IE", font-files("../../fonts/opensans-light-webfont.ttf", "../fonts/opensans-light-webfont.woff", "../fonts/opensans-light-webfont.eot", "../fonts/opensans-light-webfont.svg"));
+@include font-face("OpenSansLt", font-files("../../fonts/opensans-light-webfont.ttf", "../../fonts/opensans-light-webfont.woff", "../fonts/opensans-light-webfont.eot", "../fonts/opensans-light-webfont.svg"));
+@include font-face("OpenSansLt_IE", font-files("../../fonts/opensans-light-webfont.ttf", "../../fonts/opensans-light-webfont.woff", "../fonts/opensans-light-webfont.eot", "../fonts/opensans-light-webfont.svg"));
 @include font-face("OpenSansLtCn", font-files("../fonts/OpenSans-CondLight.ttf", "examples/bgrove.otf"));
 @include font-face("OpenSans_IE", font-files("../fonts/opensans-regular-webfont.eot", "examples/bgrove.otf"));
 
@@ -190,7 +190,7 @@ h3 {
 		@include flex(1 calc(100% - #{$med-gutter}));
 		/*margin-top:$med-gutter;*/
 		font-size:1.2em;
-		max-width:$quarter;
+		max-width:212px;
 		line-height:1.2em;
 		text-align:left;
 		background-color:white;
@@ -319,21 +319,20 @@ h3 {
 			position: absolute;
 			bottom: $med-gutter;
 			left: calc( 50% - #{$quarter / 4} );
-			
+			padding:0;
+			padding-top:3px;
 			margin: #{$med-gutter / 2} auto;
-			
 			z-index: 400;
-			
-			height:4rem;
+			height:2.3rem;
 			width:#{$quarter / 2};
+			color:$blue;
+			background-color:transparent;
+			border:1px solid $blue;			
 			
-			color:$white;
-			font-size:2rem;
-			
-			background-color:$charcoal;
-		  @include background-image(linear-gradient(to bottom right, $charcoal, black));	/*	Unknown why compass throws an error at this. It is right.	*/
-		  /*@include border-radius(1rem);*/
-		  border: 3px solid $blue;
+			//background-color:$charcoal;
+		  	//@include background-image(linear-gradient(to bottom right, $charcoal, black));	/*	Unknown why compass throws an error at this. It is right.	*/
+		 	 /*@include border-radius(1rem);*/
+		 	 //border: 3px solid $blue;
 		  
 			box-sizing:border-box;
 			min-height:32px;
@@ -344,16 +343,25 @@ h3 {
 			@include transition-duration(0.750s);
 			
 			&:hover {
-			  @include background-image(linear-gradient(to bottom right, black, $charcoal));	/*	Unknown why compass throws an error at this. It is right.	*/
+			  //@include background-image(linear-gradient(to bottom right, black, $charcoal));	/*	Unknown why compass throws an error at this. It is right.	*/
 			  border: 1px solid $white;
+			
+				& a {
+					color:#fff;
+				}
 			}
 			& a {
 				color:$white;
+				height:100%;
+				width:100%;
+				display:block;
+				line-height:1.6em;
 			}
 		}
 		/*	Background images (shown initially, hidden with click)	*/
 			&:hover {
 				background:transparent;
+				
 			}
 		&:after {
 			content: "";
@@ -556,17 +564,19 @@ textarea {
 
 .submitButton {
 	padding-top:7px;
-	color:#fff;
+	border:1px solid $blue;
+	color:$white;
 	margin: #{$med-gutter / 2} auto;
 	box-sizing:border-box;
 	min-height:32px;
-	background-color:$blue;
+	background-color:transparent;
 	width:#{$quarter / 2};
 }
 
 .submitButton:hover	{
 	cursor:pointer;
-	background-color:rgba($blue, .9);
+	border:1px solid #fff;
+	color:#fff
 }
 
 .form-success {
@@ -685,7 +695,7 @@ textarea {
 }
 @media (min-width:575px) and (max-width:850px) {
 	.two ul {
-	width: calc(2 * #{$quarter} + #{$med-gutter});
+	width: calc(2 * #{$quarter} + #{$med-gutter} * 2);
 		
 		& li {
 			@include flex(1 calc(50% - #{$med-gutter}));
@@ -702,7 +712,7 @@ textarea {
 
 @media (min-width:850px) and (max-width:1107px) {
 	.two ul {
-		width: calc(3 * #{$quarter} + #{$med-gutter} * 2);
+		width: calc(3 * #{$quarter} + #{$med-gutter} * 3);
 	}
 	
 	.two {
@@ -755,7 +765,7 @@ textarea {
 		}
 		& > li:nth-child(3n) {
 			right:0;
-			left:initial;
+			left:auto;
 		}
 		& > li:nth-child(-n + 3) {
 			top:0;

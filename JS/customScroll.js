@@ -1,4 +1,4 @@
-var showdebug=true,
+var showdebug=false,
 	ssOptions = {
 		speed: 250,
 		easing: 'linear',
