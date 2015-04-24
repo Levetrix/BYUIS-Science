@@ -44,7 +44,7 @@ $default-box-shadow-color: $black;
 $default-box-shadow-h-offset: 0px;
 $default-box-shadow-v-offset: -80px;
 $default-box-shadow-blur: 80px;
-$default-box-shadow-spread: 0px;
+$default-box-shadow-spread: 0px; 
 $default-box-shadow-inset: inset;
 
 $media-break-0: "I`m not needed because you don`t media query everything!!";
@@ -56,7 +56,7 @@ $media-break-2-only: $media-break-2, " and max-width:1107px";
 $OpenSans: "OpenSans", "OpenSans_IE";
 $OpenSansLt: "OpenSansLt", "OpenSansLt_IE";
 
-@include font-face("OpenSans", font-files("//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf", "//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf", "//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf", "//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf"));
+@include font-face("OpenSans", font-files("//is.byu.edu/site/resources/fonts/OpenSans-Regular.ttf"));
 @include font-face("OpenSansLt", font-files("//is.byu.edu/site/resources/fonts/opensans-light-webfont.ttf", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.woff", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.eot", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.svg"));
 @include font-face("OpenSansLt_IE", font-files("//is.byu.edu/site/resources/fonts/opensans-light-webfont.ttf", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.woff", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.eot", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.svg"));
 @include font-face("OpenSansLtCn", font-files("//is.byu.edu/site/resources/fonts/OpenSans-CondLight.ttf", "examples/bgrove.otf"));
