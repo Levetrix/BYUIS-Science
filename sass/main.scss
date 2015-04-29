@@ -123,6 +123,10 @@ h3 {
 	cursor:pointer;
 }
 
+.tab-bar {
+	height:3.25rem;
+}
+
 /////////////////////////////////////
 //////// End Standard Reset /////////
 /////////////////////////////////////
@@ -562,7 +566,7 @@ textarea {
 }
 
 .submitButton {
-	padding-top:7px;
+	padding-top:4px;
 	border:1px solid $blue;
 	color:$white;
 	margin: #{$med-gutter / 2} auto;
